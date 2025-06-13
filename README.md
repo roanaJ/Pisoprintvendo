@@ -167,5 +167,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Contact
 
 For assistance, please contact:
-- Email: support@pisoprint.com
-- Phone: (032) 123-4567
+- Email: jwarenf@gmail.com
+- Phone: +639 456 447 156
