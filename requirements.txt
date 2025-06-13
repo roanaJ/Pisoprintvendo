@@ -1,0 +1,5 @@
+Pillow>=9.4.0
+PyMuPDF>=1.21.1
+pyserial>=3.5
+pywin32>=305; platform_system=="Windows"
+tk>=0.1.0

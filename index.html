@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#4285f4">
+    
+    <!-- Favicon and Apple Touch Icon -->
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" href="images/icon-192x192.png" type="image/png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    
+    <!-- PWA manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- Title and description -->
+    <title>PisoPrint System</title>
+    <meta name="description" content="Monitor and control your PisoPrint 3D printer system">
+</head>
+<body>
+    <!-- Mobile menu toggle button -->
+    <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Drawer navigation -->
+    <div class="drawer-overlay" id="drawer-overlay"></div>
+    <nav class="drawer-nav" id="drawer-nav">
+        <div class="drawer-header">
+            <h2>PisoPrint</h2>
+            <button class="drawer-close" id="drawer-close">&times;</button>
+        </div>
+        <div class="drawer-content">
+            <ul class="drawer-nav-list">
+                <li class="drawer-nav-item" id="nav-dashboard">
+                    <a href="#dashboard">
+                        <i class="fas fa-tachometer-alt"></i>
+                        Dashboard
+                    </a>
+                </li>
+                <li class="drawer-nav-item" id="nav-printers">
+                    <a href="#printers">
+                        <i class="fas fa-print"></i>
+                        Printers
+                    </a>
+                </li>
+                <li class="drawer-nav-item" id="nav-jobs">
+                    <a href="#jobs">
+                        <i class="fas fa-tasks"></i>
+                        Print Jobs
+                    </a>
+                </li>
+                <li class="drawer-nav-item" id="nav-resources">
+                    <a href="#resources">
+                        <i class="fas fa-box-open"></i>
+                        Resources
+                    </a>
+                </li>
+                <li class="drawer-nav-item" id="nav-history">
+                    <a href="#history">
+                        <i class="fas fa-history"></i>
+                        History
+                    </a>
+                </li>
+                <li class="drawer-nav-item" id="nav-settings">
+                    <a href="#settings">
+                        <i class="fas fa-cog"></i>
+                        Settings
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main content area -->
+    <div class="main-content">
+        <div class="container">
+            <!-- Dashboard content (default view) -->
+            <section id="dashboard-section" class="content-section active">
+                <h1>Dashboard</h1>
+                <div class="dashboard">
+                    <!-- Dashboard cards go here -->
+                    <div class="card">
+                        <h3>Printer Status</h3>
+                        <p><span class="status-indicator status-normal"></span> Ready</p>
+                        <p>Temperature: <span id="printer-temp">200°C</span></p>
+                    </div>
+                    <div class="card">
+                        <h3>Resources</h3>
+                        <p>Filament: <span id="filament-level" class="status-normal">85%</span></p>
+                        <p>Disk Space: <span id="disk-space" class="status-normal">67%</span></p>
+                    </div>
+                    <!-- More cards... -->
+                </div>
+            </section>
+
+            <!-- Printers section -->
+            <section id="printers-section" class="content-section">
+                <h1>Printers</h1>
+                <div class="printers-list">
+                    <!-- Printer list content -->
+                    <div class="card">
+                        <h3>Printer 1</h3>
+                        <p><span class="status-indicator status-normal"></span> Active</p>
+                        <button class="btn">Control</button>
+                    </div>
+                    <div class="card">
+                        <h3>Printer 2</h3>
+                        <p><span class="status-indicator status-normal"></span> Idle</p>
+                        <button class="btn">Control</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Jobs section -->
+            <section id="jobs-section" class="content-section">
+                <h1>Print Jobs</h1>
+                <div class="jobs-list">
+                    <!-- Jobs list content -->
+                    <div class="card">
+                        <h3>Current Job</h3>
+                        <p>Progress: 45%</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 45%"></div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3>Job Queue</h3>
+                        <ul>
+                            <li>Model_A.stl - Ready</li>
+                            <li>Model_B.stl - Waiting</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resources section -->
+            <section id="resources-section" class="content-section">
+                <h1>Resources</h1>
+                <div class="resources-list">
+                    <!-- Resources content -->
+                    <div class="card">
+                        <h3>Consumables</h3>
+                        <p>Filament: <span id="res-filament-level">85%</span></p>
+                        <p>Paper: <span id="res-paper-level">62%</span></p>
+                        <p>Ink: <span id="res-ink-level">78%</span></p>
+                    </div>
+                    <div class="card">
+                        <h3>System Resources</h3>
+                        <p>Memory: <span id="memory-usage">32%</span></p>
+                        <p>CPU: <span id="cpu-usage">28%</span></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- History section -->
+            <section id="history-section" class="content-section">
+                <h1>History</h1>
+                <div class="history-content">
+                    <!-- History content -->
+                    <div class="card">
+                        <h3>Recent Jobs</h3>
+                        <ul>
+                            <li>Model_X.stl - Completed (Yesterday)</li>
+                            <li>Model_Y.stl - Failed (3 days ago)</li>
+                            <li>Model_Z.stl - Completed (Last week)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Settings section -->
+            <section id="settings-section" class="content-section">
+                <h1>Settings</h1>
+                <div class="settings-content">
+                    <!-- Settings content -->
+                    <div class="card">
+                        <h3>Printer Settings</h3>
+                        <form>
+                            <div class="form-group">
+                                <label for="default-temp">Default Temperature (°C)</label>
+                                <input type="number" id="default-temp" value="200">
+                            </div>
+                            <div class="form-group">
+                                <label for="default-speed">Default Speed (mm/s)</label>
+                                <input type="number" id="default-speed" value="60">
+                            </div>
+                            <button type="button" class="btn">Save</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Alerts container -->
+            <div id="alerts-container" class="alerts-container"></div>
+        </div>
+    </div>
+
+    <!-- Bottom mobile navigation -->
+    <nav class="mobile-nav">
+        <div class="nav-item" data-section="dashboard">
+            <i class="fas fa-tachometer-alt"></i>
+            <span>Dashboard</span>
+        </div>
+        <div class="nav-item" data-section="printers">
+            <i class="fas fa-print"></i>
+            <span>Printers</span>
+        </div>
+        <div class="nav-item" data-section="jobs">
+            <i class="fas fa-tasks"></i>
+            <span>Jobs</span>
+        </div>
+        <div class="nav-item" data-section="resources">
+            <i class="fas fa-box-open"></i>
+            <span>Resources</span>
+        </div>
+    </nav>
+
+    <!-- Scripts -->
+    <script src="js/drawer-nav.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/single-page-nav.js"></script>
+</body>
+</html> 
