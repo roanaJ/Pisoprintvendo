@@ -1,0 +1,111 @@
+{% extends "layout.html" %}
+
+{% block title %}User Profile - PisoPrint Monitor{% endblock %}
+
+{% block page_title %}My Profile{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">Account Information</h5>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" value="{{ session.username }}" readonly>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Role</label>
+                    <input type="text" class="form-control" value="{{ session.user_role|title }}" readonly>
+                </div>
+                {% if user_data.email %}
+                <div class="mb-3">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" value="{{ user_data.email }}" readonly>
+                </div>
+                {% endif %}
+                <div class="mb-3">
+                    <label class="form-label">Last Login</label>
+                    <input type="text" class="form-control" value="{{ user_data.last_login|default('First login') }}" readonly>
+                </div>
+            </div>
+        </div>
+
+        <div class="card shadow-sm mt-4">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">Change Password</h5>
+            </div>
+            <div class="card-body">
+                <form id="changePasswordForm">
+                    <div class="mb-3">
+                        <label for="currentPassword" class="form-label">Current Password</label>
+                        <input type="password" class="form-control" id="currentPassword" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="newPassword" class="form-label">New Password</label>
+                        <input type="password" class="form-control" id="newPassword" required minlength="6">
+                        <div class="form-text">Password must be at least 6 characters</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirmPassword" class="form-label">Confirm New Password</label>
+                        <input type="password" class="form-control" id="confirmPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Update Password</button>
+                    <div class="alert mt-3 d-none" id="passwordAlert"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+$(document).ready(function() {
+    $('#changePasswordForm').on('submit', function(e) {
+        e.preventDefault();
+        
+        const currentPassword = $('#currentPassword').val();
+        const newPassword = $('#newPassword').val();
+        const confirmPassword = $('#confirmPassword').val();
+        
+        // Validate passwords match
+        if (newPassword !== confirmPassword) {
+            showAlert('danger', 'New passwords do not match');
+            return;
+        }
+        
+        // Send request to change password
+        $.ajax({
+            url: '/api/change-password',
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify({
+                current_password: currentPassword,
+                new_password: newPassword
+            }),
+            success: function(response) {
+                if (response.status === 'ok') {
+                    showAlert('success', 'Password updated successfully');
+                    $('#changePasswordForm')[0].reset();
+                } else {
+                    showAlert('danger', response.message || 'Failed to update password');
+                }
+            },
+            error: function() {
+                showAlert('danger', 'Server error occurred');
+            }
+        });
+    });
+    
+    function showAlert(type, message) {
+        const alert = $('#passwordAlert');
+        alert.removeClass('d-none alert-success alert-danger')
+             .addClass('alert-' + type)
+             .text(message);
+    }
+});
+</script>
+{% endblock %} 

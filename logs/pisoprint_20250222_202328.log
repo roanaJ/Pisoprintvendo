@@ -1,0 +1,60 @@
+2025-02-22 20:23:28,397 - pisoprint - INFO - [STARTUP] Application starting
+2025-02-22 20:23:28,882 - pisoprint - INFO - Found SumatraPDF at: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+2025-02-22 20:23:28,903 - pisoprint - INFO - PDFPrinter initialized with printer: EPSON L120 Series
+2025-02-22 20:23:28,913 - pisoprint - INFO - SumatraPDF path: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+2025-02-22 20:23:28,914 - pisoprint - INFO - [APP_STATE] System state reset
+2025-02-22 20:23:28,914 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:23:29,021 - pisoprint - INFO - [NAVIGATION] Main screen displayed
+2025-02-22 20:23:29,032 - pisoprint - INFO - [APP_INIT] PisoPrint system initialized
+2025-02-22 20:23:29,033 - pisoprint - INFO - [STARTUP] Application initialized and ready
+2025-02-22 20:23:30,267 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:23:30,275 - pisoprint - INFO - [NAVIGATION] Receive screen displayed
+2025-02-22 20:23:37,503 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:23:37,615 - pisoprint - INFO - [NAVIGATION] Preview screen displayed
+2025-02-22 20:23:43,652 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:23:43,711 - pisoprint - INFO - [NAVIGATION] Preview screen displayed
+2025-02-22 20:23:44,272 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:23:44,325 - pisoprint - INFO - [NAVIGATION] Preview screen displayed
+2025-02-22 20:23:44,704 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:23:44,788 - pisoprint - INFO - [NAVIGATION] Preview screen displayed
+2025-02-22 20:23:45,023 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:23:45,100 - pisoprint - INFO - [NAVIGATION] Preview screen displayed
+2025-02-22 20:23:45,369 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:23:45,438 - pisoprint - INFO - [NAVIGATION] Preview screen displayed
+2025-02-22 20:23:45,729 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:23:45,797 - pisoprint - INFO - [NAVIGATION] Preview screen displayed
+2025-02-22 20:23:46,093 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:23:46,167 - pisoprint - INFO - [NAVIGATION] Preview screen displayed
+2025-02-22 20:23:46,414 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:23:46,482 - pisoprint - INFO - [NAVIGATION] Preview screen displayed
+2025-02-22 20:23:47,488 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:23:47,512 - pisoprint - INFO - [NAVIGATION] Selection screen displayed
+2025-02-22 20:24:06,911 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:24:06,920 - pisoprint - INFO - CoinAcceptor initialized with port COM4, baudrate 9600
+2025-02-22 20:24:06,921 - pisoprint - INFO - Connecting to coin acceptor on port COM4
+2025-02-22 20:24:08,927 - pisoprint - INFO - Coin reading thread started
+2025-02-22 20:24:08,928 - pisoprint - INFO - Successfully connected to coin acceptor
+2025-02-22 20:24:08,933 - pisoprint - INFO - Coin callback function set
+2025-02-22 20:24:08,934 - pisoprint - INFO - [PAYMENT] Coin acceptor connected and ready
+2025-02-22 20:24:08,966 - pisoprint - INFO - [NAVIGATION] Payment screen displayed
+2025-02-22 20:24:13,311 - pisoprint - INFO - [PAYMENT] Payment cancelled. No coins inserted.
+2025-02-22 20:24:13,311 - pisoprint - ERROR - [CoinAcceptor] Invalid callback function (not callable)
+2025-02-22 20:24:13,317 - pisoprint - INFO - [APP_STATE] System state reset
+2025-02-22 20:24:13,352 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:24:13,377 - pisoprint - INFO - [NAVIGATION] Main screen displayed
+2025-02-22 20:24:14,575 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:24:14,584 - pisoprint - INFO - [NAVIGATION] Receive screen displayed
+2025-02-22 20:24:22,299 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:24:22,370 - pisoprint - INFO - [NAVIGATION] Preview screen displayed
+2025-02-22 20:24:23,597 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:24:23,623 - pisoprint - INFO - [NAVIGATION] Selection screen displayed
+2025-02-22 20:24:33,145 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:24:33,154 - pisoprint - INFO - CoinAcceptor already connected
+2025-02-22 20:24:33,155 - pisoprint - INFO - Coin callback function set
+2025-02-22 20:24:33,155 - pisoprint - ERROR - [CoinAcceptor] Invalid callback function (not callable)
+2025-02-22 20:24:33,156 - pisoprint - INFO - [PAYMENT] Coin acceptor connected and ready
+2025-02-22 20:24:33,178 - pisoprint - INFO - [NAVIGATION] Payment screen displayed
+2025-02-22 20:25:22,241 - pisoprint - ERROR - [CoinAcceptor] Invalid callback function (not callable)
+2025-02-22 20:25:22,257 - pisoprint - INFO - [APP_STATE] System state reset
+2025-02-22 20:25:22,290 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:25:22,316 - pisoprint - INFO - [NAVIGATION] Main screen displayed

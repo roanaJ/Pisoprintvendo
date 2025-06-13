@@ -1,0 +1,206 @@
+2025-02-22 20:27:46,960 - pisoprint - INFO - [STARTUP] Application starting
+2025-02-22 20:27:47,414 - pisoprint - INFO - Found SumatraPDF at: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+2025-02-22 20:27:47,429 - pisoprint - INFO - PDFPrinter initialized with printer: EPSON L120 Series
+2025-02-22 20:27:47,431 - pisoprint - INFO - SumatraPDF path: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+2025-02-22 20:27:47,432 - pisoprint - INFO - [APP_STATE] System state reset
+2025-02-22 20:27:47,448 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:27:47,545 - pisoprint - INFO - [NAVIGATION] Main screen displayed
+2025-02-22 20:27:47,547 - pisoprint - INFO - [APP_INIT] PisoPrint system initialized
+2025-02-22 20:27:47,548 - pisoprint - INFO - [STARTUP] Application initialized and ready
+2025-02-22 20:27:48,932 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:27:48,940 - pisoprint - INFO - [NAVIGATION] Receive screen displayed
+2025-02-22 20:27:55,051 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:27:55,142 - pisoprint - INFO - [NAVIGATION] Preview screen displayed
+2025-02-22 20:27:56,980 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:27:57,043 - pisoprint - INFO - [NAVIGATION] Preview screen displayed
+2025-02-22 20:27:57,285 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:27:57,362 - pisoprint - INFO - [NAVIGATION] Preview screen displayed
+2025-02-22 20:27:58,119 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:27:58,142 - pisoprint - INFO - [NAVIGATION] Selection screen displayed
+2025-02-22 20:28:01,564 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:28:01,576 - pisoprint - INFO - CoinAcceptor initialized with port COM4, baudrate 9600
+2025-02-22 20:28:01,577 - pisoprint - INFO - Connecting to coin acceptor on port COM4
+2025-02-22 20:28:03,582 - pisoprint - INFO - Coin reading thread started
+2025-02-22 20:28:03,582 - pisoprint - INFO - Successfully connected to coin acceptor
+2025-02-22 20:28:03,588 - pisoprint - INFO - Coin callback function set
+2025-02-22 20:28:03,590 - pisoprint - INFO - [PAYMENT] Coin acceptor connected and ready
+2025-02-22 20:28:03,617 - pisoprint - INFO - [NAVIGATION] Payment screen displayed
+2025-02-22 20:28:31,289 - pisoprint - ERROR - [CoinAcceptor] Invalid callback function (not callable)
+2025-02-22 20:28:31,309 - pisoprint - INFO - [APP_STATE] System state reset
+2025-02-22 20:28:31,344 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:28:31,371 - pisoprint - INFO - [NAVIGATION] Main screen displayed
+2025-02-22 20:28:32,929 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:28:32,939 - pisoprint - INFO - [NAVIGATION] Receive screen displayed
+2025-02-22 20:28:41,945 - pisoprint - INFO - Ignoring coin - payment already processing
+2025-02-22 20:28:42,068 - pisoprint - INFO - Ignoring coin - payment already processing
+2025-02-22 20:28:42,193 - pisoprint - INFO - Ignoring coin - payment already processing
+2025-02-22 20:28:42,314 - pisoprint - INFO - Ignoring coin - payment already processing
+2025-02-22 20:28:42,449 - pisoprint - INFO - Ignoring coin - payment already processing
+2025-02-22 20:28:42,588 - pisoprint - INFO - Ignoring coin - payment already processing
+2025-02-22 20:28:42,711 - pisoprint - INFO - Ignoring coin - payment already processing
+2025-02-22 20:28:42,835 - pisoprint - INFO - Ignoring coin - payment already processing
+2025-02-22 20:28:42,950 - pisoprint - INFO - Ignoring coin - payment already processing
+2025-02-22 20:28:43,078 - pisoprint - INFO - Ignoring coin - payment already processing
+2025-02-22 20:28:47,112 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:28:47,181 - pisoprint - INFO - [NAVIGATION] Preview screen displayed
+2025-02-22 20:28:48,782 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:28:48,808 - pisoprint - INFO - [NAVIGATION] Selection screen displayed
+2025-02-22 20:29:00,325 - pisoprint - INFO - Ignoring coin - payment already processing
+2025-02-22 20:29:00,467 - pisoprint - INFO - Ignoring coin - payment already processing
+2025-02-22 20:29:00,606 - pisoprint - INFO - Ignoring coin - payment already processing
+2025-02-22 20:29:00,745 - pisoprint - INFO - Ignoring coin - payment already processing
+2025-02-22 20:29:00,888 - pisoprint - INFO - Ignoring coin - payment already processing
+2025-02-22 20:29:01,020 - pisoprint - INFO - Ignoring coin - payment already processing
+2025-02-22 20:29:01,141 - pisoprint - INFO - Ignoring coin - payment already processing
+2025-02-22 20:29:01,265 - pisoprint - INFO - Ignoring coin - payment already processing
+2025-02-22 20:29:01,410 - pisoprint - INFO - Ignoring coin - payment already processing
+2025-02-22 20:29:01,554 - pisoprint - INFO - Ignoring coin - payment already processing
+2025-02-22 20:29:02,655 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:29:02,676 - pisoprint - INFO - CoinAcceptor already connected
+2025-02-22 20:29:02,676 - pisoprint - INFO - Coin callback function set
+2025-02-22 20:29:02,677 - pisoprint - ERROR - [CoinAcceptor] Invalid callback function (not callable)
+2025-02-22 20:29:02,677 - pisoprint - INFO - [PAYMENT] Coin acceptor connected and ready
+2025-02-22 20:29:02,705 - pisoprint - INFO - [NAVIGATION] Payment screen displayed
+2025-02-22 20:29:03,964 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:05,090 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:06,197 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:07,298 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:08,400 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:09,502 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:10,604 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:11,705 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:12,807 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:13,910 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:15,012 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:16,114 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:17,215 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:18,317 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:19,419 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:20,521 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:21,623 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:22,725 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:23,826 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:24,928 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:26,030 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:27,132 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:28,234 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:29,336 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:30,438 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:31,539 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:32,641 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:33,743 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:34,845 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:35,947 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:37,049 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:38,150 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:39,252 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:39,269 - pisoprint - INFO - [PAYMENT] Payment cancelled. No coins inserted.
+2025-02-22 20:29:39,270 - pisoprint - ERROR - [CoinAcceptor] Invalid callback function (not callable)
+2025-02-22 20:29:39,272 - pisoprint - INFO - [APP_STATE] System state reset
+2025-02-22 20:29:39,305 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:29:39,331 - pisoprint - INFO - [NAVIGATION] Main screen displayed
+2025-02-22 20:29:40,354 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:40,562 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:29:40,572 - pisoprint - INFO - [NAVIGATION] Receive screen displayed
+2025-02-22 20:29:41,456 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:42,558 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:43,661 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:44,763 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:45,866 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:46,481 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:29:46,599 - pisoprint - INFO - [NAVIGATION] Preview screen displayed
+2025-02-22 20:29:46,970 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:48,073 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:48,186 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:29:48,211 - pisoprint - INFO - [NAVIGATION] Selection screen displayed
+2025-02-22 20:29:49,174 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:50,277 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:51,380 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:51,993 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:29:52,003 - pisoprint - INFO - CoinAcceptor already connected
+2025-02-22 20:29:52,003 - pisoprint - INFO - Coin callback function set
+2025-02-22 20:29:52,006 - pisoprint - ERROR - [CoinAcceptor] Invalid callback function (not callable)
+2025-02-22 20:29:52,006 - pisoprint - INFO - [PAYMENT] Coin acceptor connected and ready
+2025-02-22 20:29:52,035 - pisoprint - INFO - [NAVIGATION] Payment screen displayed
+2025-02-22 20:29:52,483 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:53,586 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:54,688 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:55,790 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:56,892 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:57,994 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:29:59,096 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:30:00,198 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:30:01,299 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:30:01,696 - pisoprint - INFO - [PAYMENT] Payment cancelled. No coins inserted.
+2025-02-22 20:30:01,697 - pisoprint - ERROR - [CoinAcceptor] Invalid callback function (not callable)
+2025-02-22 20:30:01,701 - pisoprint - INFO - [APP_STATE] System state reset
+2025-02-22 20:30:01,736 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:30:01,762 - pisoprint - INFO - [NAVIGATION] Main screen displayed
+2025-02-22 20:30:02,401 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:30:03,504 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:30:04,606 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:30:05,060 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:30:05,081 - pisoprint - INFO - [NAVIGATION] Receive screen displayed
+2025-02-22 20:30:05,722 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:30:06,890 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:30:08,010 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:30:09,112 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:30:10,214 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:30:11,318 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:30:12,420 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:30:13,523 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:30:14,625 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:30:14,941 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:30:15,013 - pisoprint - INFO - [NAVIGATION] Preview screen displayed
+2025-02-22 20:30:15,728 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:30:16,381 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:30:16,408 - pisoprint - INFO - [NAVIGATION] Selection screen displayed
+2025-02-22 20:30:16,831 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:30:17,933 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:30:18,897 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:30:18,905 - pisoprint - INFO - CoinAcceptor already connected
+2025-02-22 20:30:18,905 - pisoprint - INFO - Coin callback function set
+2025-02-22 20:30:18,918 - pisoprint - ERROR - [CoinAcceptor] Invalid callback function (not callable)
+2025-02-22 20:30:18,919 - pisoprint - INFO - [PAYMENT] Coin acceptor connected and ready
+2025-02-22 20:30:18,940 - pisoprint - INFO - [NAVIGATION] Payment screen displayed
+2025-02-22 20:30:19,036 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:30:20,137 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:30:20,417 - pisoprint - INFO - [PAYMENT] Payment cancelled. No coins inserted.
+2025-02-22 20:30:20,417 - pisoprint - ERROR - [CoinAcceptor] Invalid callback function (not callable)
+2025-02-22 20:30:20,421 - pisoprint - INFO - [APP_STATE] System state reset
+2025-02-22 20:30:20,455 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:30:20,480 - pisoprint - INFO - [NAVIGATION] Main screen displayed
+2025-02-22 20:30:21,239 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:30:22,054 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:30:22,063 - pisoprint - INFO - [NAVIGATION] Receive screen displayed
+2025-02-22 20:30:22,341 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:30:23,443 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:30:24,545 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:30:25,767 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:30:26,872 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:30:27,332 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:30:27,401 - pisoprint - INFO - [NAVIGATION] Preview screen displayed
+2025-02-22 20:30:27,975 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:30:29,077 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:30:29,666 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:30:29,691 - pisoprint - INFO - [NAVIGATION] Selection screen displayed
+2025-02-22 20:30:30,179 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:30:31,280 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:30:32,290 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 20:30:32,298 - pisoprint - INFO - CoinAcceptor already connected
+2025-02-22 20:30:32,299 - pisoprint - INFO - Coin callback function set
+2025-02-22 20:30:32,300 - pisoprint - ERROR - [CoinAcceptor] Invalid callback function (not callable)
+2025-02-22 20:30:32,301 - pisoprint - INFO - [PAYMENT] Coin acceptor connected and ready
+2025-02-22 20:30:32,327 - pisoprint - INFO - [NAVIGATION] Payment screen displayed
+2025-02-22 20:30:32,383 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:30:33,485 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:30:34,587 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:30:35,688 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:30:36,790 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:30:37,893 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:30:38,994 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:30:40,097 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:30:41,198 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:30:42,341 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:30:43,447 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+2025-02-22 20:30:44,556 - pisoprint - ERROR - [CoinAcceptor] Error reading from serial port: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))

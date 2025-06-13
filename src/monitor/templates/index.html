@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}PisoPrint Monitor - Home{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="jumbotron mt-4">
+        <h1>Welcome to PisoPrint Monitoring System</h1>
+        <p class="lead">Use the navigation menu to monitor your print system.</p>
+        <hr class="my-4">
+        <p>Click the button below to go to the dashboard.</p>
+        <a class="btn btn-primary btn-lg" href="{{ url_for('dashboard') }}" role="button">Go to Dashboard</a>
+    </div>
+</div>
+{% endblock %}

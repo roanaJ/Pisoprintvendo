@@ -1,0 +1,30 @@
+[2025-02-24 05:38:11,242] [INFO] STARTUP: Application starting
+[2025-02-24 05:38:14,837] [DEBUG] SumatraPDF not found in registry
+[2025-02-24 05:38:14,838] [INFO] Found SumatraPDF at: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-24 05:38:14,838] [INFO] PDFPrinter initialized with printer: EPSON L120 Series
+[2025-02-24 05:38:14,839] [INFO] SumatraPDF path: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-24 05:38:14,842] [INFO] Connecting to Arduino on port COM4
+[2025-02-24 05:38:14,843] [ERROR] ArduinoInterface: Error connecting to Arduino: could not open port 'COM4': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+[2025-02-24 05:38:14,857] [INFO] STARTUP: Application initialized and ready
+[2025-02-24 05:39:06,661] [INFO] CoinAcceptor initialized with port COM4, baudrate 9600
+[2025-02-24 05:39:06,665] [INFO] Connecting to coin acceptor on port COM4
+[2025-02-24 05:39:06,670] [ERROR] CoinAcceptor: Serial error: could not open port 'COM4': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+[2025-02-24 05:39:11,978] [ERROR] PAYMENT: Failed to connect to coin acceptor
+[2025-02-24 05:39:35,449] [INFO] NAVIGATION: Proceeding to printing with 1 copies
+[2025-02-24 05:39:35,450] [ERROR] CoinAcceptor: Invalid callback function (not callable)
+[2025-02-24 05:39:35,498] [ERROR] CoinAcceptor: Invalid callback function (not callable)
+[2025-02-24 05:39:35,615] [INFO] Printer status: {'code': 2, 'ready': False, 'details': {'error': True}}
+[2025-02-24 05:39:58,140] [INFO] Connecting to coin acceptor on port COM4
+[2025-02-24 05:39:58,141] [ERROR] CoinAcceptor: Serial error: could not open port 'COM4': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+[2025-02-24 05:39:59,715] [ERROR] PAYMENT: Failed to connect to coin acceptor
+[2025-02-24 05:40:04,612] [INFO] NAVIGATION: Proceeding to printing with 1 copies
+[2025-02-24 05:40:04,613] [ERROR] CoinAcceptor: Invalid callback function (not callable)
+[2025-02-24 05:40:04,661] [ERROR] CoinAcceptor: Invalid callback function (not callable)
+[2025-02-24 05:40:04,775] [INFO] Printer status: {'code': 2, 'ready': False, 'details': {'error': True}}
+[2025-02-24 05:41:19,842] [INFO] Connecting to coin acceptor on port COM4
+[2025-02-24 05:41:19,843] [ERROR] CoinAcceptor: Serial error: could not open port 'COM4': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+[2025-02-24 05:41:21,628] [ERROR] PAYMENT: Failed to connect to coin acceptor
+[2025-02-24 05:41:26,115] [INFO] NAVIGATION: Proceeding to printing with 1 copies
+[2025-02-24 05:41:26,116] [ERROR] CoinAcceptor: Invalid callback function (not callable)
+[2025-02-24 05:41:26,206] [ERROR] CoinAcceptor: Invalid callback function (not callable)
+[2025-02-24 05:41:26,317] [INFO] Printer status: {'code': 2, 'ready': False, 'details': {'error': True}}

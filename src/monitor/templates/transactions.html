@@ -1,0 +1,348 @@
+{% extends "layout.html" %}
+
+{% block title %}Transactions - PisoPrint Monitor{% endblock %}
+
+{% block page_title %}Transaction History{% endblock %}
+
+{% block page_buttons %}
+<button type="button" class="btn btn-sm btn-outline-secondary" id="refreshTransactions">
+    <i class="bi bi-arrow-clockwise"></i> Refresh
+</button>
+<button type="button" class="btn btn-sm btn-outline-primary" id="exportCSV">
+    <i class="bi bi-download"></i> Export CSV
+</button>
+{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-md-4">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Total Revenue</h5>
+                <h2 class="card-text text-primary" id="totalRevenue">₱0.00</h2>
+                <div class="small text-muted">Lifetime</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Pages Printed</h5>
+                <h2 class="card-text text-success" id="totalPages">0</h2>
+                <div class="small text-muted">Total count</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Average Per Job</h5>
+                <h2 class="card-text text-info" id="averagePerJob">₱0.00</h2>
+                <div class="small text-muted">All transactions</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-4">
+    <div class="col-md-12">
+        <div class="card shadow-sm">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Revenue Chart</h5>
+                <div class="btn-group btn-group-sm">
+                    <button type="button" class="btn btn-outline-secondary active" data-period="7">7 Days</button>
+                    <button type="button" class="btn btn-outline-secondary" data-period="14">14 Days</button>
+                    <button type="button" class="btn btn-outline-secondary" data-period="30">30 Days</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <canvas id="revenueChart" height="250"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card shadow-sm">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Transaction List</h5>
+                <div class="form-inline">
+                    <input type="text" id="searchTransactions" class="form-control form-control-sm" placeholder="Search...">
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table id="transactionsTable" class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Filename</th>
+                                <th>Pages</th>
+                                <th>Copies</th>
+                                <th>Total Pages</th>
+                                <th>Type</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="transactionsList">
+                            <tr>
+                                <td colspan="10" class="text-center">Loading transactions...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    let revenueChart = null;
+    let transactionsData = [];
+    
+    function loadTransactionData() {
+        // Load transaction data
+        $.ajax({
+            url: '/api/transactions',
+            type: 'GET',
+            dataType: 'json',
+            success: function(data) {
+                if (data.status === 'ok') {
+                    // Update summary stats
+                    $('#totalRevenue').text('₱' + data.summary.total_revenue.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+                    $('#totalPages').text(data.summary.total_pages.toLocaleString());
+                    $('#averagePerJob').text('₱' + data.summary.average_per_job.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+                    
+                    // Store transactions data for filtering
+                    transactionsData = data.transactions;
+                    
+                    // Update transactions table
+                    updateTransactionsTable(transactionsData);
+                    
+                    // Update revenue chart
+                    updateRevenueChart(data.chart_data);
+                }
+            }
+        });
+    }
+    
+    function updateTransactionsTable(transactions) {
+        let tableHtml = '';
+        
+        if (transactions.length === 0) {
+            tableHtml = '<tr><td colspan="10" class="text-center">No transactions found</td></tr>';
+        } else {
+            transactions.forEach(tx => {
+                const statusBadge = tx.status === 'Success' 
+                    ? '<span class="badge bg-success">Success</span>' 
+                    : '<span class="badge bg-danger">Failed</span>';
+                
+                tableHtml += `
+                    <tr>
+                        <td>${tx.id}</td>
+                        <td>${tx.date}</td>
+                        <td>${tx.time}</td>
+                        <td>${tx.filename}</td>
+                        <td>${tx.pages}</td>
+                        <td>${tx.copies}</td>
+                        <td>${tx.total_pages}</td>
+                        <td>${tx.type}</td>
+                        <td>${tx.amount}</td>
+                        <td>${statusBadge}</td>
+                    </tr>
+                `;
+            });
+        }
+        
+        $('#transactionsList').html(tableHtml);
+    }
+    
+    function updateRevenueChart(chartData) {
+        const ctx = document.getElementById('revenueChart').getContext('2d');
+        
+        // Get active period
+        const activePeriodBtn = $('.btn-group button.active');
+        const days = parseInt(activePeriodBtn.data('period'));
+        
+        // Filter data for selected period
+        const filteredData = chartData.slice(-days);
+        
+        // Prepare chart data
+        const labels = filteredData.map(d => moment(d.date).format('MMM D'));
+        const revenues = filteredData.map(d => d.revenue);
+        const pages = filteredData.map(d => d.pages);
+        
+        // Destroy existing chart if it exists
+        if (revenueChart) {
+            revenueChart.destroy();
+        }
+        
+        // Create new chart
+        revenueChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        label: 'Revenue (₱)',
+                        data: revenues,
+                        backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1,
+                        yAxisID: 'y'
+                    },
+                    {
+                        label: 'Pages',
+                        data: pages,
+                        backgroundColor: 'rgba(75, 192, 192, 0.5)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1,
+                        type: 'line',
+                        yAxisID: 'y1'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        position: 'left',
+                        title: {
+                            display: true,
+                            text: 'Revenue (₱)'
+                        },
+                        ticks: {
+                            callback: function(value) {
+                                return '₱' + value;
+                            }
+                        }
+                    },
+                    y1: {
+                        beginAtZero: true,
+                        position: 'right',
+                        title: {
+                            display: true,
+                            text: 'Pages'
+                        },
+                        grid: {
+                            drawOnChartArea: false
+                        }
+                    }
+                },
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                const label = context.dataset.label || '';
+                                const value = context.raw;
+                                if (label === 'Revenue (₱)') {
+                                    return 'Revenue: ₱' + value.toFixed(2);
+                                } else {
+                                    return 'Pages: ' + value;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    }
+    
+    function filterTransactions(searchText) {
+        if (!searchText) {
+            updateTransactionsTable(transactionsData);
+            return;
+        }
+        
+        const filteredData = transactionsData.filter(tx => {
+            // Search in multiple fields
+            const searchIn = [
+                tx.id.toString(),
+                tx.date,
+                tx.time,
+                tx.filename,
+                tx.pages.toString(),
+                tx.copies.toString(),
+                tx.total_pages.toString(),
+                tx.type,
+                tx.amount,
+                tx.status
+            ].join(' ').toLowerCase();
+            
+            return searchIn.includes(searchText.toLowerCase());
+        });
+        
+        updateTransactionsTable(filteredData);
+    }
+    
+    function exportToCSV() {
+        // Create CSV content
+        let csvContent = "data:text/csv;charset=utf-8,";
+        
+        // Add headers
+        csvContent += "ID,Date,Time,Filename,Pages,Copies,Total Pages,Type,Amount,Status\n";
+        
+        // Add data rows
+        transactionsData.forEach(tx => {
+            csvContent += `${tx.id},${tx.date},${tx.time},"${tx.filename}",${tx.pages},${tx.copies},${tx.total_pages},${tx.type},${tx.amount_raw},${tx.status}\n`;
+        });
+        
+        // Create download link and trigger download
+        const encodedUri = encodeURI(csvContent);
+        const link = document.createElement("a");
+        link.setAttribute("href", encodedUri);
+        link.setAttribute("download", "pisoprint_transactions.csv");
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+    
+    $(document).ready(function() {
+        // Load data on page load
+        loadTransactionData();
+        
+        // Refresh button
+        $('#refreshTransactions').click(function() {
+            loadTransactionData();
+        });
+        
+        // Chart period buttons
+        $('.btn-group button').click(function() {
+            $('.btn-group button').removeClass('active');
+            $(this).addClass('active');
+            
+            // Reload chart with new period
+            $.ajax({
+                url: '/api/transactions',
+                type: 'GET',
+                dataType: 'json',
+                success: function(data) {
+                    if (data.status === 'ok') {
+                        updateRevenueChart(data.chart_data);
+                    }
+                }
+            });
+        });
+        
+        // Search functionality
+        $('#searchTransactions').on('keyup', function() {
+            const searchText = $(this).val();
+            filterTransactions(searchText);
+        });
+        
+        // Export CSV button
+        $('#exportCSV').click(exportToCSV);
+        
+        // Auto-refresh every 60 seconds
+        setInterval(loadTransactionData, 60000);
+    });
+</script>
+{% endblock %}

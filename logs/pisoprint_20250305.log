@@ -1,0 +1,20 @@
+[2025-03-05 14:34:04,638] [INFO] STARTUP: Application starting
+[2025-03-05 14:34:10,585] [DEBUG] SumatraPDF not found in registry
+[2025-03-05 14:34:10,586] [INFO] Found SumatraPDF at: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-03-05 14:34:10,587] [INFO] PDFPrinter initialized with printer: EPSON L120 Series
+[2025-03-05 14:34:10,587] [INFO] SumatraPDF path: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-03-05 14:34:10,589] [INFO] Connecting to Arduino on port COM4
+[2025-03-05 14:34:10,590] [ERROR] ArduinoInterface: Error connecting to Arduino: could not open port 'COM4': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+[2025-03-05 14:34:10,605] [INFO] STARTUP: Application initialized and ready
+[2025-03-05 14:34:56,863] [INFO] CoinAcceptor initialized with port COM4, baudrate 9600
+[2025-03-05 14:34:56,870] [INFO] Connecting to coin acceptor on port COM4
+[2025-03-05 14:34:56,871] [ERROR] CoinAcceptor: Serial error: could not open port 'COM4': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+[2025-03-05 14:34:59,031] [ERROR] PAYMENT: Failed to connect to coin acceptor
+[2025-03-05 14:35:12,219] [INFO] NAVIGATION: Proceeding to printing with 1 copies
+[2025-03-05 14:35:12,220] [ERROR] CoinAcceptor: Invalid callback function (not callable)
+[2025-03-05 14:35:12,305] [ERROR] CoinAcceptor: Invalid callback function (not callable)
+[2025-03-05 14:35:12,429] [INFO] Printer status: {'code': 0, 'ready': True, 'details': {}}
+[2025-03-05 14:35:12,431] [INFO] Printing PDF: C:/Users/Waren/Downloads/Chapter III - Part2 Continuation_Guide for Embedded Systems Project - METHODOLOGY.pdf
+[2025-03-05 14:35:12,432] [INFO] Print command: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe -print-to EPSON L120 Series -print-settings copies=1 C:/Users/Waren/Downloads/Chapter III - Part2 Continuation_Guide for Embedded Systems Project - METHODOLOGY.pdf
+[2025-03-05 14:35:47,184] [INFO] PRINT_JOB: Chapter III - Part2 Continuation_Guide for Embedded Systems Project - METHODOLOGY.pdf, 1 copies, 0 pages
+[2025-03-05 14:35:47,185] [INFO] Print command sent successfully

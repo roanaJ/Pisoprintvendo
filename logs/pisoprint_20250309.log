@@ -1,0 +1,42 @@
+[2025-03-09 12:29:51,946] [INFO] STARTUP: Application starting
+[2025-03-09 12:29:55,299] [DEBUG] SumatraPDF not found in registry
+[2025-03-09 12:29:55,300] [INFO] Found SumatraPDF at: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-03-09 12:29:55,300] [INFO] PDFPrinter initialized with printer: EPSON L120 Series
+[2025-03-09 12:29:55,301] [INFO] SumatraPDF path: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-03-09 12:29:55,304] [INFO] Connecting to Arduino on port COM4
+[2025-03-09 12:29:55,305] [ERROR] ArduinoInterface: Error connecting to Arduino: could not open port 'COM4': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+[2025-03-09 12:29:56,058] [INFO] STARTUP: Application initialized and ready
+[2025-03-09 12:37:52,413] [INFO] CoinAcceptor initialized with port COM4, baudrate 9600
+[2025-03-09 12:37:52,416] [INFO] Connecting to coin acceptor on port COM4
+[2025-03-09 12:37:52,417] [ERROR] CoinAcceptor: Serial error: could not open port 'COM4': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+[2025-03-09 12:38:03,997] [ERROR] PAYMENT: Failed to connect to coin acceptor
+[2025-03-09 12:38:23,969] [INFO] Ignoring coin - payment already processing
+[2025-03-09 12:38:24,202] [INFO] Ignoring coin - payment already processing
+[2025-03-09 12:38:25,866] [INFO] NAVIGATION: Proceeding to printing with 3 copies
+[2025-03-09 12:38:25,867] [ERROR] CoinAcceptor: Invalid callback function (not callable)
+[2025-03-09 12:38:25,957] [ERROR] CoinAcceptor: Invalid callback function (not callable)
+[2025-03-09 12:38:26,082] [INFO] Printer status: {'code': 2, 'ready': False, 'details': {'error': True}}
+[2025-03-09 12:49:40,724] [INFO] STARTUP: Application starting
+[2025-03-09 12:49:43,567] [DEBUG] SumatraPDF not found in registry
+[2025-03-09 12:49:43,567] [INFO] Found SumatraPDF at: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-03-09 12:49:43,568] [INFO] PDFPrinter initialized with printer: EPSON L120 Series
+[2025-03-09 12:49:43,568] [INFO] SumatraPDF path: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-03-09 12:49:43,570] [INFO] Connecting to Arduino on port COM4
+[2025-03-09 12:49:43,571] [ERROR] ArduinoInterface: Error connecting to Arduino: could not open port 'COM4': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+[2025-03-09 12:49:44,178] [INFO] STARTUP: Application initialized and ready
+[2025-03-09 12:50:35,062] [INFO] STARTUP: Application starting
+[2025-03-09 12:50:37,985] [DEBUG] SumatraPDF not found in registry
+[2025-03-09 12:50:37,986] [INFO] Found SumatraPDF at: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-03-09 12:50:37,988] [INFO] PDFPrinter initialized with printer: EPSON L120 Series
+[2025-03-09 12:50:37,989] [INFO] SumatraPDF path: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-03-09 12:50:37,991] [INFO] Connecting to Arduino on port COM4
+[2025-03-09 12:50:37,992] [ERROR] ArduinoInterface: Error connecting to Arduino: could not open port 'COM4': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+[2025-03-09 12:50:38,577] [INFO] STARTUP: Application initialized and ready
+[2025-03-09 12:52:05,991] [INFO] STARTUP: Application starting
+[2025-03-09 12:52:11,578] [DEBUG] SumatraPDF not found in registry
+[2025-03-09 12:52:11,578] [INFO] Found SumatraPDF at: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-03-09 12:52:11,580] [INFO] PDFPrinter initialized with printer: EPSON L120 Series
+[2025-03-09 12:52:11,581] [INFO] SumatraPDF path: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-03-09 12:52:11,583] [INFO] Connecting to Arduino on port COM4
+[2025-03-09 12:52:11,586] [ERROR] ArduinoInterface: Error connecting to Arduino: could not open port 'COM4': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+[2025-03-09 12:52:12,255] [INFO] STARTUP: Application initialized and ready

@@ -1,0 +1,244 @@
+[2025-02-23 00:23:02,264] [INFO] STARTUP: Application starting
+[2025-02-23 00:23:05,229] [DEBUG] SumatraPDF not found in registry
+[2025-02-23 00:23:05,230] [INFO] Found SumatraPDF at: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-23 00:23:05,230] [INFO] PDFPrinter initialized with printer: EPSON L120 Series
+[2025-02-23 00:23:05,231] [INFO] SumatraPDF path: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-23 00:23:05,232] [INFO] Connecting to Arduino on port COM4
+[2025-02-23 00:23:07,239] [WARNING] Unexpected response from Arduino: PisoPrint Arduino Ready
+[2025-02-23 00:23:07,244] [INFO] Successfully connected to Arduino
+[2025-02-23 00:23:07,245] [INFO] STARTUP: Application initialized and ready
+[2025-02-23 00:23:07,380] [DEBUG] Received from Arduino: PONG
+[2025-02-23 00:23:34,101] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-23 00:23:34,102] [INFO] Admin button pressed
+[2025-02-23 00:23:34,103] [INFO] Calling admin callback
+[2025-02-23 00:23:35,504] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-23 00:23:35,504] [INFO] Admin button pressed
+[2025-02-23 00:23:35,505] [INFO] Calling admin callback
+[2025-02-23 00:23:36,010] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-23 00:23:36,010] [INFO] Admin button pressed
+[2025-02-23 00:23:36,011] [INFO] Calling admin callback
+[2025-02-23 11:29:27,187] [INFO] STARTUP: Application starting
+[2025-02-23 11:29:30,541] [DEBUG] SumatraPDF not found in registry
+[2025-02-23 11:29:30,542] [INFO] Found SumatraPDF at: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-23 11:29:30,542] [INFO] PDFPrinter initialized with printer: EPSON L120 Series
+[2025-02-23 11:29:30,543] [INFO] SumatraPDF path: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-23 11:29:30,544] [INFO] Connecting to Arduino on port COM4
+[2025-02-23 11:29:30,547] [ERROR] ArduinoInterface: Error connecting to Arduino: could not open port 'COM4': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+[2025-02-23 11:29:30,560] [INFO] STARTUP: Application initialized and ready
+[2025-02-23 11:30:16,502] [INFO] CoinAcceptor initialized with port COM4, baudrate 9600
+[2025-02-23 11:30:16,502] [INFO] Connecting to coin acceptor on port COM4
+[2025-02-23 11:30:16,503] [ERROR] CoinAcceptor: Serial error: could not open port 'COM4': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+[2025-02-23 11:30:19,435] [ERROR] PAYMENT: Failed to connect to coin acceptor
+[2025-02-23 11:30:28,139] [INFO] NAVIGATION: Proceeding to printing with 1 copies
+[2025-02-23 11:30:28,140] [ERROR] CoinAcceptor: Invalid callback function (not callable)
+[2025-02-23 11:30:28,228] [ERROR] CoinAcceptor: Invalid callback function (not callable)
+[2025-02-23 11:30:28,359] [INFO] Printer status: {'code': 0, 'ready': True, 'details': {}}
+[2025-02-23 11:30:28,392] [INFO] Printing PDF: C:/Users/Waren/Downloads/Chapter I - Guide for Embedded Systems Project.pdf
+[2025-02-23 11:30:28,396] [INFO] Print command: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe -print-to EPSON L120 Series -print-settings copies=1 C:/Users/Waren/Downloads/Chapter I - Guide for Embedded Systems Project.pdf
+[2025-02-23 11:30:31,516] [INFO] PRINT_JOB: Chapter I - Guide for Embedded Systems Project.pdf, 1 copies, 0 pages
+[2025-02-23 11:30:31,528] [INFO] Print command sent successfully
+[2025-02-23 11:31:10,428] [INFO] Connecting to coin acceptor on port COM4
+[2025-02-23 11:31:10,429] [ERROR] CoinAcceptor: Serial error: could not open port 'COM4': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+[2025-02-23 11:31:12,931] [ERROR] PAYMENT: Failed to connect to coin acceptor
+[2025-02-23 11:31:24,660] [INFO] NAVIGATION: Proceeding to printing with 1 copies
+[2025-02-23 11:31:24,661] [ERROR] CoinAcceptor: Invalid callback function (not callable)
+[2025-02-23 11:31:24,752] [ERROR] CoinAcceptor: Invalid callback function (not callable)
+[2025-02-23 11:31:24,875] [INFO] Printer status: {'code': 2, 'ready': False, 'details': {'error': True}}
+[2025-02-23 11:45:21,833] [INFO] STARTUP: Application starting
+[2025-02-23 11:45:24,595] [DEBUG] SumatraPDF not found in registry
+[2025-02-23 11:45:24,596] [INFO] Found SumatraPDF at: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-23 11:45:24,596] [INFO] PDFPrinter initialized with printer: EPSON L120 Series
+[2025-02-23 11:45:24,597] [INFO] SumatraPDF path: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-23 11:45:24,599] [INFO] Connecting to Arduino on port COM4
+[2025-02-23 11:45:24,600] [ERROR] ArduinoInterface: Error connecting to Arduino: could not open port 'COM4': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+[2025-02-23 11:45:24,611] [INFO] STARTUP: Application initialized and ready
+[2025-02-23 12:33:05,754] [INFO] STARTUP: Application starting
+[2025-02-23 12:33:11,588] [DEBUG] SumatraPDF not found in registry
+[2025-02-23 12:33:11,589] [INFO] Found SumatraPDF at: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-23 12:33:11,591] [INFO] PDFPrinter initialized with printer: EPSON L120 Series
+[2025-02-23 12:33:11,592] [INFO] SumatraPDF path: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-23 12:33:11,594] [INFO] Connecting to Arduino on port COM4
+[2025-02-23 12:33:11,595] [ERROR] ArduinoInterface: Error connecting to Arduino: could not open port 'COM4': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+[2025-02-23 12:33:11,604] [INFO] STARTUP: Application initialized and ready
+[2025-02-23 12:35:19,804] [INFO] STARTUP: Application starting
+[2025-02-23 12:35:22,432] [DEBUG] SumatraPDF not found in registry
+[2025-02-23 12:35:22,433] [INFO] Found SumatraPDF at: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-23 12:35:22,433] [INFO] PDFPrinter initialized with printer: EPSON L120 Series
+[2025-02-23 12:35:22,434] [INFO] SumatraPDF path: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-23 12:35:22,436] [INFO] Connecting to Arduino on port COM4
+[2025-02-23 12:35:24,446] [WARNING] Unexpected response from Arduino: PisoPrint Arduino Ready
+[2025-02-23 12:35:24,450] [INFO] Successfully connected to Arduino
+[2025-02-23 12:35:24,452] [INFO] STARTUP: Application initialized and ready
+[2025-02-23 12:35:24,598] [DEBUG] Received from Arduino: PONG
+[2025-02-23 12:35:45,874] [DEBUG] Received from Arduino: COIN:1
+[2025-02-23 12:35:45,875] [INFO] Coin detected: 1
+[2025-02-23 12:35:45,876] [WARNING] No coin callback registered
+[2025-02-23 12:35:48,690] [DEBUG] Received from Arduino: COIN:2
+[2025-02-23 12:35:48,691] [INFO] Coin detected: 2
+[2025-02-23 12:35:48,691] [WARNING] No coin callback registered
+[2025-02-23 12:36:16,260] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-23 12:36:16,261] [INFO] Admin button pressed
+[2025-02-23 12:36:16,262] [INFO] Calling admin callback
+[2025-02-23 12:36:17,801] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-23 12:36:17,801] [INFO] Admin button pressed
+[2025-02-23 12:36:17,802] [INFO] Calling admin callback
+[2025-02-23 12:36:18,482] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-23 12:36:18,483] [INFO] Admin button pressed
+[2025-02-23 12:36:18,483] [INFO] Calling admin callback
+[2025-02-23 12:36:19,273] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-23 12:36:19,274] [INFO] Admin button pressed
+[2025-02-23 12:36:19,275] [INFO] Calling admin callback
+[2025-02-23 12:36:58,215] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-23 12:36:58,215] [INFO] Admin button pressed
+[2025-02-23 12:36:58,216] [INFO] Calling admin callback
+[2025-02-23 12:38:16,193] [DEBUG] Received from Arduino: PisoPrint Arduino Ready
+[2025-02-23 12:38:20,313] [DEBUG] Received from Arduino: PisoPrint Arduino Ready
+[2025-02-23 12:38:23,831] [DEBUG] Received from Arduino: PisoPrint Arduino Ready
+[2025-02-23 12:38:25,843] [DEBUG] Received from Arduino: PisoPrint Arduino Ready
+[2025-02-23 12:38:26,951] [DEBUG] Received from Arduino: PisoPrint Arduino Ready
+[2025-02-23 12:38:28,962] [DEBUG] Received from Arduino: PisoPrint Arduino Ready
+[2025-02-23 12:38:37,301] [DEBUG] Received from Arduino: PisoPrint Arduino Ready
+[2025-02-23 12:38:41,017] [DEBUG] Received from Arduino: COIN:5
+[2025-02-23 12:38:41,018] [INFO] Coin detected: 5
+[2025-02-23 12:38:41,019] [WARNING] No coin callback registered
+[2025-02-23 12:39:12,726] [INFO] PAYMENT: Coin acceptor ready via Arduino
+[2025-02-23 12:39:23,176] [INFO] PAYMENT: Payment cancelled. No coins inserted.
+[2025-02-23 12:39:26,268] [ERROR] ArduinoInterface: Error reading from serial: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+[2025-02-23 12:39:27,355] [ERROR] Button error: WriteFile failed (PermissionError(13, 'Access is denied.', None, 5))
+[2025-02-23 12:39:27,395] [ERROR] ArduinoInterface: Error reading from serial: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+[2025-02-23 12:39:28,498] [ERROR] ArduinoInterface: Error reading from serial: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+[2025-02-23 12:39:29,598] [ERROR] Button error: WriteFile failed (PermissionError(13, 'Access is denied.', None, 5))
+[2025-02-23 12:39:29,600] [ERROR] ArduinoInterface: Error reading from serial: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+[2025-02-23 12:39:30,394] [ERROR] Button error: WriteFile failed (PermissionError(13, 'Access is denied.', None, 5))
+[2025-02-23 12:39:30,702] [ERROR] ArduinoInterface: Error reading from serial: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+[2025-02-23 12:39:31,276] [ERROR] Button error: WriteFile failed (PermissionError(13, 'Access is denied.', None, 5))
+[2025-02-23 12:39:31,399] [ERROR] Button error: WriteFile failed (PermissionError(13, 'Access is denied.', None, 5))
+[2025-02-23 12:39:31,571] [ERROR] Button error: WriteFile failed (PermissionError(13, 'Access is denied.', None, 5))
+[2025-02-23 12:39:31,754] [ERROR] Button error: WriteFile failed (PermissionError(13, 'Access is denied.', None, 5))
+[2025-02-23 12:39:31,805] [ERROR] ArduinoInterface: Error reading from serial: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+[2025-02-23 12:39:32,343] [ERROR] Button error: WriteFile failed (PermissionError(13, 'Access is denied.', None, 5))
+[2025-02-23 12:39:32,453] [ERROR] Button error: WriteFile failed (PermissionError(13, 'Access is denied.', None, 5))
+[2025-02-23 12:39:32,600] [ERROR] Button error: WriteFile failed (PermissionError(13, 'Access is denied.', None, 5))
+[2025-02-23 12:39:32,881] [ERROR] Button error: WriteFile failed (PermissionError(13, 'Access is denied.', None, 5))
+[2025-02-23 12:39:32,907] [ERROR] ArduinoInterface: Error reading from serial: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+[2025-02-23 12:39:34,009] [ERROR] ArduinoInterface: Error reading from serial: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+[2025-02-23 12:39:34,253] [ERROR] Button error: WriteFile failed (PermissionError(13, 'Access is denied.', None, 5))
+[2025-02-23 12:39:34,352] [ERROR] Button error: WriteFile failed (PermissionError(13, 'Access is denied.', None, 5))
+[2025-02-23 12:39:34,511] [ERROR] Button error: WriteFile failed (PermissionError(13, 'Access is denied.', None, 5))
+[2025-02-23 12:39:34,721] [ERROR] Button error: WriteFile failed (PermissionError(13, 'Access is denied.', None, 5))
+[2025-02-23 12:39:35,025] [ERROR] Button error: WriteFile failed (PermissionError(13, 'Access is denied.', None, 5))
+[2025-02-23 12:39:35,111] [ERROR] ArduinoInterface: Error reading from serial: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+[2025-02-23 12:39:36,213] [ERROR] ArduinoInterface: Error reading from serial: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+[2025-02-23 12:39:37,316] [ERROR] ArduinoInterface: Error reading from serial: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+[2025-02-23 12:39:38,459] [ERROR] ArduinoInterface: Error reading from serial: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+[2025-02-23 12:39:39,571] [ERROR] ArduinoInterface: Error reading from serial: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5))
+[2025-02-23 12:39:44,367] [INFO] STARTUP: Application starting
+[2025-02-23 12:39:47,029] [DEBUG] SumatraPDF not found in registry
+[2025-02-23 12:39:47,029] [INFO] Found SumatraPDF at: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-23 12:39:47,030] [INFO] PDFPrinter initialized with printer: EPSON L120 Series
+[2025-02-23 12:39:47,030] [INFO] SumatraPDF path: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-23 12:39:47,032] [INFO] Connecting to Arduino on port COM4
+[2025-02-23 12:39:47,033] [ERROR] ArduinoInterface: Error connecting to Arduino: could not open port 'COM4': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+[2025-02-23 12:39:47,042] [INFO] STARTUP: Application initialized and ready
+[2025-02-23 12:40:04,186] [INFO] CoinAcceptor initialized with port COM4, baudrate 9600
+[2025-02-23 12:40:04,186] [INFO] Connecting to coin acceptor on port COM4
+[2025-02-23 12:40:04,187] [ERROR] CoinAcceptor: Serial error: could not open port 'COM4': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+[2025-02-23 12:40:06,068] [ERROR] PAYMENT: Failed to connect to coin acceptor
+[2025-02-23 12:40:12,114] [INFO] NAVIGATION: Proceeding to printing with 1 copies
+[2025-02-23 12:40:12,115] [ERROR] CoinAcceptor: Invalid callback function (not callable)
+[2025-02-23 12:40:12,175] [ERROR] CoinAcceptor: Invalid callback function (not callable)
+[2025-02-23 12:40:12,305] [INFO] Printer status: {'code': 0, 'ready': True, 'details': {}}
+[2025-02-23 12:40:12,309] [INFO] Printing PDF: C:/Users/Waren/Downloads/Chapter III - Part2 Continuation_Guide for Embedded Systems Project - METHODOLOGY.pdf
+[2025-02-23 12:40:12,310] [INFO] Print command: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe -print-to EPSON L120 Series -print-settings copies=1 C:/Users/Waren/Downloads/Chapter III - Part2 Continuation_Guide for Embedded Systems Project - METHODOLOGY.pdf
+[2025-02-23 12:40:44,165] [INFO] PRINT_JOB: Chapter III - Part2 Continuation_Guide for Embedded Systems Project - METHODOLOGY.pdf, 1 copies, 0 pages
+[2025-02-23 12:40:44,166] [INFO] Print command sent successfully
+[2025-02-23 13:07:36,507] [INFO] STARTUP: Application starting
+[2025-02-23 13:07:41,659] [DEBUG] SumatraPDF not found in registry
+[2025-02-23 13:07:41,659] [INFO] Found SumatraPDF at: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-23 13:07:41,660] [INFO] PDFPrinter initialized with printer: EPSON L120 Series
+[2025-02-23 13:07:41,660] [INFO] SumatraPDF path: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-23 13:07:41,663] [INFO] Connecting to Arduino on port COM4
+[2025-02-23 13:07:41,663] [ERROR] ArduinoInterface: Error connecting to Arduino: could not open port 'COM4': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+[2025-02-23 13:07:41,673] [INFO] STARTUP: Application initialized and ready
+[2025-02-23 13:08:33,788] [INFO] STARTUP: Application starting
+[2025-02-23 13:08:36,403] [DEBUG] SumatraPDF not found in registry
+[2025-02-23 13:08:36,404] [INFO] Found SumatraPDF at: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-23 13:08:36,404] [INFO] PDFPrinter initialized with printer: EPSON L120 Series
+[2025-02-23 13:08:36,405] [INFO] SumatraPDF path: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-23 13:08:36,407] [INFO] Connecting to Arduino on port COM4
+[2025-02-23 13:08:38,413] [WARNING] Unexpected response from Arduino: PisoPrint Arduino Ready
+[2025-02-23 13:08:38,417] [INFO] Successfully connected to Arduino
+[2025-02-23 13:08:38,418] [INFO] STARTUP: Application initialized and ready
+[2025-02-23 13:08:38,549] [DEBUG] Received from Arduino: PONG
+[2025-02-23 13:08:56,450] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-23 13:08:56,451] [INFO] Admin button pressed
+[2025-02-23 13:08:56,452] [INFO] Calling admin callback
+[2025-02-23 13:09:01,272] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-23 13:09:01,273] [INFO] Admin button pressed
+[2025-02-23 13:09:01,274] [INFO] Calling admin callback
+[2025-02-23 13:09:01,956] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-23 13:09:01,957] [INFO] Admin button pressed
+[2025-02-23 13:09:01,958] [INFO] Calling admin callback
+[2025-02-23 13:09:02,630] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-23 13:09:02,630] [INFO] Admin button pressed
+[2025-02-23 13:09:02,631] [INFO] Calling admin callback
+[2025-02-23 13:09:03,317] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-23 13:09:03,318] [INFO] Admin button pressed
+[2025-02-23 13:09:03,319] [INFO] Calling admin callback
+[2025-02-23 13:09:03,923] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-23 13:09:03,924] [INFO] Admin button pressed
+[2025-02-23 13:09:03,925] [INFO] Calling admin callback
+[2025-02-23 13:09:04,547] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-23 13:09:04,547] [INFO] Admin button pressed
+[2025-02-23 13:09:04,554] [INFO] Calling admin callback
+[2025-02-23 13:09:05,165] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-23 13:09:05,166] [INFO] Admin button pressed
+[2025-02-23 13:09:05,167] [INFO] Calling admin callback
+[2025-02-23 13:09:05,751] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-23 13:09:05,752] [INFO] Admin button pressed
+[2025-02-23 13:09:05,753] [INFO] Calling admin callback
+[2025-02-23 13:09:06,340] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-23 13:09:06,340] [INFO] Admin button pressed
+[2025-02-23 13:09:06,341] [INFO] Calling admin callback
+[2025-02-23 13:09:48,402] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-23 13:09:48,403] [INFO] Admin button pressed
+[2025-02-23 13:09:48,404] [INFO] Calling admin callback
+[2025-02-23 13:10:10,559] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-23 13:10:10,559] [INFO] Admin button pressed
+[2025-02-23 13:10:10,560] [INFO] Calling admin callback
+[2025-02-23 13:10:24,226] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-23 13:10:24,226] [INFO] Admin button pressed
+[2025-02-23 13:10:24,227] [INFO] Calling admin callback
+[2025-02-23 13:10:24,815] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-23 13:10:24,815] [INFO] Admin button pressed
+[2025-02-23 13:10:24,816] [INFO] Calling admin callback
+[2025-02-23 13:10:25,588] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-23 13:10:25,589] [INFO] Admin button pressed
+[2025-02-23 13:10:25,590] [INFO] Calling admin callback
+[2025-02-23 13:10:26,640] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-23 13:10:26,641] [INFO] Admin button pressed
+[2025-02-23 13:10:26,642] [INFO] Calling admin callback
+[2025-02-23 13:10:28,010] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-23 13:10:28,010] [INFO] Admin button pressed
+[2025-02-23 13:10:28,011] [INFO] Calling admin callback
+[2025-02-23 13:10:29,118] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-23 13:10:29,118] [INFO] Admin button pressed
+[2025-02-23 13:10:29,119] [INFO] Calling admin callback
+[2025-02-23 13:10:30,218] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-23 13:10:30,218] [INFO] Admin button pressed
+[2025-02-23 13:10:30,219] [INFO] Calling admin callback
+[2025-02-23 13:10:31,426] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-23 13:10:31,426] [INFO] Admin button pressed
+[2025-02-23 13:10:31,426] [INFO] Calling admin callback
+[2025-02-23 13:10:32,394] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-23 13:10:32,394] [INFO] Admin button pressed
+[2025-02-23 13:10:32,398] [INFO] Calling admin callback
+[2025-02-23 13:10:33,309] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-23 13:10:33,309] [INFO] Admin button pressed
+[2025-02-23 13:10:33,310] [INFO] Calling admin callback
+[2025-02-23 13:10:34,325] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-23 13:10:34,325] [INFO] Admin button pressed
+[2025-02-23 13:10:34,339] [INFO] Calling admin callback
+[2025-02-23 13:11:09,857] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-23 13:11:09,857] [INFO] Admin button pressed
+[2025-02-23 13:11:09,858] [INFO] Calling admin callback

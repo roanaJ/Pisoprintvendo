@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <title>{% block title %}PisoPrint Monitor{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/css/bootstrap-icons.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='vendor/js/chart.umd.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/js/moment.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/css/all.min.css') }}">
+    <style>
+        /* Reset browser defaults that might cause spacing */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        
+        /* Force header to top of viewport */
+        header {
+            margin-top: 0 !important;
+        }
+        
+        /* Additional responsive fixes */
+        @media (max-width: 768px) {
+            .sidebar {
+                display: none !important;
+            }
+            
+            main {
+                padding: 10px !important;
+            }
+            
+            .card {
+                margin-bottom: 15px;
+            }
+            
+            .navbar .logo h1 {
+                font-size: 1.5rem;
+            }
+            
+            .nav-menu ul {
+                padding-left: 0;
+            }
+            
+            #revenue-chart-container {
+                height: 300px !important;
+            }
+            
+            .card-title {
+                font-size: 1rem;
+            }
+            
+            /* Fix for mobile dashboard stats */
+            .dashboard-stats .card {
+                min-height: auto;
+                margin-bottom: 10px;
+            }
+        }
+        
+        /* Improved desktop styling */
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        
+        .card {
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        footer {
+            margin-top: 2rem;
+            padding: 1rem 0;
+            text-align: center;
+            color: #6c757d;
+            background-color: #f8f9fa;
+            font-size: 0.9rem;
+        }
+    </style>
+    {% block head_extra %}{% endblock %}
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='img/ctu_logo.png') }}" alt="CTU Logo">
+                <h1 data-short-title="PISOPRINT MONITOR">PISOPRINT VENDO MONITOR IOT</h1>
+            </div>
+            
+            <!-- Hamburger menu button for mobile -->
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <!-- Navigation menu -->
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="{{ url_for('dashboard') }}" class="{% if request.path == url_for('dashboard') %}active{% endif %}">Dashboard</a></li>
+                    <li><a href="{{ url_for('transactions') }}" class="{% if request.path == url_for('transactions') %}active{% endif %}">Transactions</a></li>
+                    <li><a href="{{ url_for('maintenance') }}" class="{% if request.path == url_for('maintenance') %}active{% endif %}">Maintenance</a></li>
+                    <li><a href="{{ url_for('settings') }}" class="{% if request.path == url_for('settings') %}active{% endif %}">Settings</a></li>
+                </ul>
+            </nav>
+
+            <!-- User menu -->
+            <div class="user-menu">
+                {% if session.get('user_id') %}
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user-circle"></i> {{ session.get('username') }}
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                        <span class="dropdown-item-text">
+                            <span class="badge {% if session.get('user_role') == 'administrator' %}badge-danger{% else %}badge-info{% endif %}">
+                                {{ session.get('user_role', 'User') | title }}
+                            </span>
+                        </span>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{{ url_for('profile') }}">
+                            <i class="fas fa-user"></i> My Profile
+                        </a>
+                        <a class="dropdown-item" href="{{ url_for('logout') }}">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </a>
+                    </div>
+                </div>
+                {% else %}
+                <a href="{{ url_for('login') }}" class="btn btn-outline-light">
+                    <i class="fas fa-sign-in-alt"></i> Login
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid g-0">
+        <div class="row g-0">
+            <!-- Remove the sidebar completely for all views -->
+            
+            <!-- Main content area - no space at top -->
+            <main class="col-12 p-0 p-md-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-0 pb-1 mb-2 border-bottom">
+                    <h1 class="h2">{% block page_title %}Dashboard{% endblock %}</h1>
+                    <div class="btn-toolbar mb-0">
+                        <div class="btn-group me-2">
+                            {% block page_buttons %}{% endblock %}
+                        </div>
+                    </div>
+                </div>
+
+                {% block content %}{% endblock %}
+            </main>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; {{ current_year }} PisoPrint Vendo Monitoring System</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script>
+        // Function to update sidebar status
+        function updateSidebarStatus() {
+            $.ajax({
+                url: '/api/sensor-data',
+                type: 'GET',
+                dataType: 'json',
+                success: function(data) {
+                    if (data.status === 'ok') {
+                        const sensorData = data.sensor_data;
+                        
+                        // Update paper level
+                        $('#sidebarPaperLevel').text(sensorData.paper_percentage + '%');
+                        $('#sidebarPaperProgress').css('width', sensorData.paper_percentage + '%');
+                        
+                        // Change color based on level
+                        if (sensorData.paper_percentage < 20) {
+                            $('#sidebarPaperProgress').removeClass('bg-success bg-warning').addClass('bg-danger');
+                        } else if (sensorData.paper_percentage < 50) {
+                            $('#sidebarPaperProgress').removeClass('bg-success bg-danger').addClass('bg-warning');
+                        } else {
+                            $('#sidebarPaperProgress').removeClass('bg-warning bg-danger').addClass('bg-success');
+                        }
+                        
+                        // Update ink levels
+                        $('#sidebarBlackInk').text(sensorData.ink_levels.black + '%');
+                        $('#sidebarBlackProgress').css('width', sensorData.ink_levels.black + '%');
+                        
+                        $('#sidebarCyanInk').text(sensorData.ink_levels.cyan + '%');
+                        $('#sidebarCyanProgress').css('width', sensorData.ink_levels.cyan + '%');
+                        
+                        $('#sidebarMagentaInk').text(sensorData.ink_levels.magenta + '%');
+                        $('#sidebarMagentaProgress').css('width', sensorData.ink_levels.magenta + '%');
+                        
+                        $('#sidebarYellowInk').text(sensorData.ink_levels.yellow + '%');
+                        $('#sidebarYellowProgress').css('width', sensorData.ink_levels.yellow + '%');
+                    }
+                },
+                error: function() {
+                    console.log('Error fetching sensor data');
+                }
+            });
+            
+            // Update system status
+            $.ajax({
+                url: '/api/system-status',
+                type: 'GET',
+                dataType: 'json',
+                success: function(data) {
+                    if (data.status === 'ok') {
+                        const systemInfo = data.system_info;
+                        
+                        // Update system status indicator
+                        if (systemInfo.printer_online) {
+                            $('#systemStatusIndicator').html('<div class="status-dot bg-success me-2"></div><span class="small">System Online</span>');
+                        } else {
+                            $('#systemStatusIndicator').html('<div class="status-dot bg-danger me-2"></div><span class="small">Printer Offline</span>');
+                        }
+                        
+                        // Check maintenance status
+                        if (systemInfo.needs_maintenance) {
+                            $('#systemStatusIndicator').append('<div class="ms-2 badge bg-warning text-dark">Maintenance Due</div>');
+                        }
+                    }
+                },
+                error: function() {
+                    $('#systemStatusIndicator').html('<div class="status-dot bg-secondary me-2"></div><span class="small">Status Unknown</span>');
+                }
+            });
+        }
+        
+        // Update status every 10 seconds
+        updateSidebarStatus();
+        setInterval(updateSidebarStatus, 10000);
+    </script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    {% block scripts %}{% endblock %}
+
+    <script>
+    // Session timeout management
+    $(document).ready(function() {
+        // Only run if user is logged in and session timeout is enabled
+        {% if session.get('user_id') %}
+        $.ajax({
+            url: '/api/settings',
+            type: 'GET',
+            dataType: 'json',
+            success: function(response) {
+                if (response.status === 'ok') {
+                    const sessionTimeout = response.settings.session_timeout || 30;
+                    let timeoutWarning = false;
+                    let timer;
+                    
+                    // Convert minutes to milliseconds
+                    const timeoutDuration = sessionTimeout * 60 * 1000;
+                    const warningTime = timeoutDuration - (2 * 60 * 1000); // 2 minutes before timeout
+                    
+                    // Reset timer when user interacts with the page
+                    function resetTimer() {
+                        clearTimeout(timer);
+                        if (timeoutWarning) {
+                            $('#timeoutWarning').remove();
+                            timeoutWarning = false;
+                        }
+                        
+                        // Set new timeout
+                        timer = setTimeout(function() {
+                            // Show warning 2 minutes before logout
+                            const warningHtml = `
+                                <div id="timeoutWarning" class="alert alert-warning alert-dismissible fade show position-fixed" 
+                                     style="bottom: 20px; right: 20px; z-index: 9999; max-width: 400px;">
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    <h5><i class="fas fa-exclamation-triangle"></i> Session Timeout</h5>
+                                    <p>Your session will expire in 2 minutes due to inactivity.</p>
+                                    <button class="btn btn-sm btn-primary" onclick="resetTimer()">Stay Logged In</button>
+                                </div>
+                            `;
+                            
+                            $('body').append(warningHtml);
+                            timeoutWarning = true;
+                            
+                            // Set timeout for actual logout
+                            setTimeout(function() {
+                                window.location.href = '/logout';
+                            }, 2 * 60 * 1000);
+                            
+                        }, warningTime);
+                    }
+                    
+                    // Reset timer on user interaction
+                    $(document).on('mousemove keypress click', resetTimer);
+                    
+                    // Initial timer
+                    resetTimer();
+                }
+            }
+        });
+        {% endif %}
+    });
+    </script>
+</body>
+</html>

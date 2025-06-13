@@ -1,0 +1,10 @@
+2025-02-22 19:10:22,734 - pisoprint - INFO - [STARTUP] Application starting
+2025-02-22 19:10:23,408 - pisoprint - INFO - Found SumatraPDF at: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+2025-02-22 19:10:23,476 - pisoprint - INFO - PDFPrinter initialized with printer: EPSON L120 Series
+2025-02-22 19:10:23,476 - pisoprint - INFO - SumatraPDF path: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+2025-02-22 19:10:23,477 - pisoprint - INFO - [APP_STATE] System state reset
+2025-02-22 19:10:23,478 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 19:10:23,589 - pisoprint - INFO - [NAVIGATION] Main screen displayed
+2025-02-22 19:10:23,608 - pisoprint - INFO - [APP_INIT] PisoPrint system initialized
+2025-02-22 19:10:23,608 - pisoprint - INFO - [STARTUP] Application initialized and ready
+2025-02-22 19:10:30,056 - pisoprint - INFO - [NAVIGATION] Screen cleared

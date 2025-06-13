@@ -1,0 +1,44 @@
+2025-02-22 19:41:49,341 - pisoprint - INFO - [STARTUP] Application starting
+2025-02-22 19:41:49,841 - pisoprint - INFO - Found SumatraPDF at: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+2025-02-22 19:41:49,852 - pisoprint - INFO - PDFPrinter initialized with printer: EPSON L120 Series
+2025-02-22 19:41:49,852 - pisoprint - INFO - SumatraPDF path: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+2025-02-22 19:41:49,857 - pisoprint - INFO - [APP_STATE] System state reset
+2025-02-22 19:41:49,866 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 19:41:49,960 - pisoprint - INFO - [NAVIGATION] Main screen displayed
+2025-02-22 19:41:49,961 - pisoprint - INFO - [APP_INIT] PisoPrint system initialized
+2025-02-22 19:41:49,962 - pisoprint - INFO - [STARTUP] Application initialized and ready
+2025-02-22 19:41:50,930 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 19:41:50,940 - pisoprint - INFO - [NAVIGATION] Receive screen displayed
+2025-02-22 19:41:58,505 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 19:41:58,597 - pisoprint - INFO - [NAVIGATION] Preview screen displayed
+2025-02-22 19:42:00,238 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 19:42:00,262 - pisoprint - INFO - [NAVIGATION] Selection screen displayed
+2025-02-22 19:42:04,512 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 19:42:04,522 - pisoprint - INFO - CoinAcceptor initialized with port COM4, baudrate 9600
+2025-02-22 19:42:04,523 - pisoprint - INFO - Connecting to coin acceptor on port COM4
+2025-02-22 19:42:06,528 - pisoprint - INFO - Coin reading thread started
+2025-02-22 19:42:06,529 - pisoprint - INFO - Successfully connected to coin acceptor
+2025-02-22 19:42:06,534 - pisoprint - INFO - Coin callback function set
+2025-02-22 19:42:06,535 - pisoprint - INFO - [PAYMENT] Coin acceptor connected and ready
+2025-02-22 19:42:06,567 - pisoprint - INFO - [NAVIGATION] Payment screen displayed
+2025-02-22 19:42:22,264 - pisoprint - INFO - Ignoring coin - payment already processing
+2025-02-22 19:42:22,382 - pisoprint - INFO - Ignoring coin - payment already processing
+2025-02-22 19:42:22,504 - pisoprint - INFO - Ignoring coin - payment already processing
+2025-02-22 19:42:22,649 - pisoprint - INFO - Ignoring coin - payment already processing
+2025-02-22 19:42:22,764 - pisoprint - INFO - Ignoring coin - payment already processing
+2025-02-22 19:42:22,889 - pisoprint - INFO - Ignoring coin - payment already processing
+2025-02-22 19:42:23,003 - pisoprint - INFO - Ignoring coin - payment already processing
+2025-02-22 19:42:24,151 - pisoprint - INFO - [NAVIGATION] Proceeding to printing with 1 copies
+2025-02-22 19:42:24,152 - pisoprint - ERROR - [CoinAcceptor] Invalid callback function (not callable)
+2025-02-22 19:42:24,191 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 19:42:24,200 - pisoprint - INFO - [NAVIGATION] Printing screen displayed
+2025-02-22 19:42:24,309 - pisoprint - INFO - [PRINT] Printing 1 copies of C:/Users/Waren/Downloads/Chapter I - Guide for Embedded Systems Project.pdf
+2025-02-22 19:42:24,317 - pisoprint - INFO - Printer status: {'code': 0, 'ready': True, 'details': {}}
+2025-02-22 19:42:24,318 - pisoprint - INFO - Printing PDF: C:/Users/Waren/Downloads/Chapter I - Guide for Embedded Systems Project.pdf
+2025-02-22 19:42:24,319 - pisoprint - INFO - Print command: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe -print-to EPSON L120 Series -print-settings copies=1 C:/Users/Waren/Downloads/Chapter I - Guide for Embedded Systems Project.pdf
+2025-02-22 19:42:27,145 - pisoprint - INFO - [PRINT_JOB] File: Chapter I - Guide for Embedded Systems Project.pdf, Copies: 1, Pages: 0
+2025-02-22 19:42:27,153 - pisoprint - INFO - Print command sent successfully
+2025-02-22 19:42:27,155 - pisoprint - INFO - [PRINT] Print job completed successfully
+2025-02-22 19:42:32,029 - pisoprint - INFO - [APP_STATE] System state reset
+2025-02-22 19:42:32,046 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 19:42:32,073 - pisoprint - INFO - [NAVIGATION] Main screen displayed

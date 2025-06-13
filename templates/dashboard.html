@@ -1,0 +1,442 @@
+{% extends "layout.html" %}
+
+{% block title %}Dashboard - PisoPrint Monitor{% endblock %}
+
+{% block page_title %}System Dashboard{% endblock %}
+
+{% block page_buttons %}
+<button type="button" class="btn btn-sm btn-outline-secondary" id="refreshDashboard">
+    <i class="bi bi-arrow-clockwise"></i> Refresh
+</button>
+{% endblock %}
+
+{% block content %}
+<h1>Dashboard</h1>
+<div class="row mb-4">
+    <div class="col-md-3">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Total Revenue</h5>
+                <h2 class="card-text text-primary" id="totalRevenue">₱0.00</h2>
+                <div class="small text-muted">Lifetime</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Pages Printed</h5>
+                <h2 class="card-text text-success" id="totalPages">0</h2>
+                <div class="small text-muted">Total count</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Recent Print Jobs</h5>
+                <h2 class="card-text text-info" id="recentJobs">0</h2>
+                <div class="small text-muted">Last 24 hours</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card shadow-sm">
+            <div class="card-body" id="maintenanceCard">
+                <h5 class="card-title">Maintenance</h5>
+                <h2 class="card-text" id="maintenanceStatus">-</h2>
+                <div class="small text-muted" id="maintenanceInfo">Checking status...</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-4">
+    <div class="col-lg-8">
+        <div class="card shadow-sm">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Revenue Trend</h5>
+                <div class="btn-group btn-group-sm">
+                    <button type="button" class="btn btn-outline-secondary active" data-period="7">7 Days</button>
+                    <button type="button" class="btn btn-outline-secondary" data-period="14">14 Days</button>
+                    <button type="button" class="btn btn-outline-secondary" data-period="30">30 Days</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <canvas id="revenueChart" height="250"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="card shadow-sm">
+            <div class="card-header">
+                <h5 class="mb-0">System Status</h5>
+            </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Printer Status
+                        <span id="printerStatus">Checking...</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        System Uptime
+                        <span id="systemUptime">-</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        System Temperature
+                        <span id="systemTemp">-</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Last Reboot
+                        <span id="lastReboot">-</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-4">
+    <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-header">
+                <h5 class="mb-0">Paper Status</h5>
+            </div>
+            <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                    <div style="width: 70%;">
+                        <div class="progress" style="height: 25px;">
+                            <div id="paperLevelBar" class="progress-bar" role="progressbar" style="width: 0%">0%</div>
+                        </div>
+                    </div>
+                    <div class="ms-3">
+                        <span id="paperLevelText">0 / 0 sheets</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="card bg-light">
+                            <div class="card-body">
+                                <h6 class="card-title">Current Weight</h6>
+                                <p class="card-text" id="paperWeight">0 g</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card bg-light">
+                            <div class="card-body">
+                                <h6 class="card-title">Sensor Type</h6>
+                                <p class="card-text">HX711 1kg Load Cell</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-header">
+                <h5 class="mb-0">Ink Levels</h5>
+            </div>
+            <div class="card-body">
+                <div class="row mb-3">
+                    <div class="col-md-3 text-center">
+                        <div class="ink-container">
+                            <div class="ink-level-outer">
+                                <div id="blackInkLevel" class="ink-level-inner bg-dark" style="height: 0%"></div>
+                            </div>
+                            <span class="ink-label">Black</span>
+                            <span id="blackInkPercent" class="ink-percent">0%</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <div class="ink-container">
+                            <div class="ink-level-outer">
+                                <div id="cyanInkLevel" class="ink-level-inner bg-info" style="height: 0%"></div>
+                            </div>
+                            <span class="ink-label">Cyan</span>
+                            <span id="cyanInkPercent" class="ink-percent">0%</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <div class="ink-container">
+                            <div class="ink-level-outer">
+                                <div id="magentaInkLevel" class="ink-level-inner bg-danger" style="height: 0%"></div>
+                            </div>
+                            <span class="ink-label">Magenta</span>
+                            <span id="magentaInkPercent" class="ink-percent">0%</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <div class="ink-container">
+                            <div class="ink-level-outer">
+                                <div id="yellowInkLevel" class="ink-level-inner bg-warning" style="height: 0%"></div>
+                            </div>
+                            <span class="ink-label">Yellow</span>
+                            <span id="yellowInkPercent" class="ink-percent">0%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="small text-muted">
+                    <i class="bi bi-info-circle"></i>
+                    Ink levels detected using non-contact water level sensors
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card shadow-sm">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Recent Transactions</h5>
+                <a href="{{ url_for('transactions') }}" class="btn btn-sm btn-outline-primary">View All</a>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Filename</th>
+                                <th>Pages</th>
+                                <th>Copies</th>
+                                <th>Type</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="recentTransactions">
+                            <tr>
+                                <td colspan="8" class="text-center">Loading transactions...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    let revenueChart = null;
+    
+    function loadDashboardData() {
+        // Load system status
+        $.ajax({
+            url: '/api/system-status',
+            type: 'GET',
+            dataType: 'json',
+            success: function(data) {
+                if (data.status === 'ok') {
+                    const systemInfo = data.system_info;
+                    const sensorData = data.sensor_data;
+                    
+                    // Update system status
+                    $('#recentJobs').text(systemInfo.recent_jobs_count);
+                    
+                    // Update printer status
+                    if (systemInfo.printer_online) {
+                        $('#printerStatus').html('<span class="badge bg-success">Online</span>');
+                    } else {
+                        $('#printerStatus').html('<span class="badge bg-danger">Offline</span>');
+                    }
+                    
+                    // Update other system stats
+                    $('#systemUptime').text(systemInfo.system_uptime);
+                    $('#systemTemp').text(systemInfo.system_temp);
+                    $('#lastReboot').text(moment(systemInfo.last_reboot).format('MMM D, YYYY, h:mm A'));
+                    
+                    // Update maintenance status
+                    if (systemInfo.needs_maintenance) {
+                        $('#maintenanceStatus').text(systemInfo.days_since_maintenance + ' days');
+                        $('#maintenanceStatus').addClass('text-danger');
+                        $('#maintenanceInfo').text('Maintenance recommended');
+                        $('#maintenanceCard').addClass('border-danger');
+                    } else {
+                        $('#maintenanceStatus').text(systemInfo.days_since_maintenance + ' days');
+                        $('#maintenanceStatus').addClass('text-success');
+                        $('#maintenanceInfo').text('Last: ' + moment(systemInfo.last_maintenance).format('MMM D, YYYY'));
+                    }
+                    
+                    // Update paper level
+                    const paperPercent = sensorData.paper_percentage;
+                    $('#paperLevelBar').css('width', paperPercent + '%').text(paperPercent + '%');
+                    $('#paperLevelText').text(sensorData.paper_level + ' / ' + sensorData.paper_capacity + ' sheets');
+                    $('#paperWeight').text(sensorData.paper_weight + ' g');
+                    
+                    // Update color based on level
+                    if (paperPercent < 20) {
+                        $('#paperLevelBar').removeClass('bg-success bg-warning').addClass('bg-danger');
+                    } else if (paperPercent < 50) {
+                        $('#paperLevelBar').removeClass('bg-success bg-danger').addClass('bg-warning');
+                    } else {
+                        $('#paperLevelBar').removeClass('bg-warning bg-danger').addClass('bg-success');
+                    }
+                    
+                    // Update ink levels
+                    updateInkLevel('black', sensorData.ink_levels.black);
+                    updateInkLevel('cyan', sensorData.ink_levels.cyan);
+                    updateInkLevel('magenta', sensorData.ink_levels.magenta);
+                    updateInkLevel('yellow', sensorData.ink_levels.yellow);
+                }
+            }
+        });
+        
+        // Load transaction data
+        $.ajax({
+            url: '/api/transactions',
+            type: 'GET',
+            dataType: 'json',
+            success: function(data) {
+                if (data.status === 'ok') {
+                    // Update summary stats
+                    $('#totalRevenue').text('₱' + data.summary.total_revenue.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+                    $('#totalPages').text(data.summary.total_pages.toLocaleString());
+                    
+                    // Update recent transactions table
+                    const transactions = data.transactions.slice(0, 5); // Show only 5 most recent
+                    let tableHtml = '';
+                    
+                    if (transactions.length === 0) {
+                        tableHtml = '<tr><td colspan="8" class="text-center">No transactions found</td></tr>';
+                    } else {
+                        transactions.forEach(tx => {
+                            const statusBadge = tx.status === 'Success' 
+                                ? '<span class="badge bg-success">Success</span>' 
+                                : '<span class="badge bg-danger">Failed</span>';
+                            
+                            tableHtml += `
+                                <tr>
+                                    <td>${tx.date}</td>
+                                    <td>${tx.time}</td>
+                                    <td>${tx.filename}</td>
+                                    <td>${tx.pages}</td>
+                                    <td>${tx.copies}</td>
+                                    <td>${tx.type}</td>
+                                    <td>${tx.amount}</td>
+                                    <td>${statusBadge}</td>
+                                </tr>
+                            `;
+                        });
+                    }
+                    
+                    $('#recentTransactions').html(tableHtml);
+                    
+                    // Update revenue chart
+                    updateRevenueChart(data.chart_data);
+                }
+            }
+        });
+    }
+    
+    function updateInkLevel(color, percent) {
+        $(`#${color}InkLevel`).css('height', percent + '%');
+        $(`#${color}InkPercent`).text(percent + '%');
+        
+        // Change color if low
+        if (percent < 20) {
+            $(`#${color}InkPercent`).addClass('text-danger');
+        } else {
+            $(`#${color}InkPercent`).removeClass('text-danger');
+        }
+    }
+    
+    function updateRevenueChart(chartData) {
+        const ctx = document.getElementById('revenueChart').getContext('2d');
+        
+        // Get active period
+        const activePeriodBtn = $('.btn-group button.active');
+        const days = parseInt(activePeriodBtn.data('period'));
+        
+        // Filter data for selected period
+        const filteredData = chartData.slice(-days);
+        
+        // Prepare chart data
+        const labels = filteredData.map(d => moment(d.date).format('MMM D'));
+        const revenues = filteredData.map(d => d.revenue);
+        
+        // Destroy existing chart if it exists
+        if (revenueChart) {
+            revenueChart.destroy();
+        }
+        
+        // Create new chart
+        revenueChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Daily Revenue (₱)',
+                    data: revenues,
+                    backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return '₱' + context.raw.toFixed(2);
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function(value) {
+                                return '₱' + value;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    }
+    
+    // Load data on page load
+    $(document).ready(function() {
+        loadDashboardData();
+        
+        // Refresh button
+        $('#refreshDashboard').click(function() {
+            loadDashboardData();
+        });
+        
+        // Chart period buttons
+        $('.btn-group button').click(function() {
+            $('.btn-group button').removeClass('active');
+            $(this).addClass('active');
+            
+            // Reload chart with new period
+            $.ajax({
+                url: '/api/transactions',
+                type: 'GET',
+                dataType: 'json',
+                success: function(data) {
+                    if (data.status === 'ok') {
+                        updateRevenueChart(data.chart_data);
+                    }
+                }
+            });
+        });
+        
+        // Auto-refresh every 30 seconds
+        setInterval(loadDashboardData, 30000);
+    });
+</script>
+{% endblock %}

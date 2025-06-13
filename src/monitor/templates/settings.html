@@ -1,0 +1,400 @@
+{% extends "layout.html" %}
+
+{% block title %}Settings - PisoPrint Monitor{% endblock %}
+
+{% block page_title %}System Settings{% endblock %}
+
+{% block page_buttons %}
+<button type="button" class="btn btn-sm btn-outline-secondary" id="refreshSettings">
+    <i class="bi bi-arrow-clockwise"></i> Refresh
+</button>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6 mb-4">
+        <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">Pricing Configuration</h5>
+            </div>
+            <div class="card-body">
+                <form id="pricingForm">
+                    <div class="mb-3">
+                        <label for="priceBwPage" class="form-label">Black & White Price (₱)</label>
+                        <input type="number" class="form-control" id="priceBwPage" min="1" step="0.5" required>
+                        <div class="form-text">Price per page for black and white prints</div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="priceColorPage" class="form-label">Color Price (₱)</label>
+                        <input type="number" class="form-control" id="priceColorPage" min="1" step="0.5" required>
+                        <div class="form-text">Price per page for color prints</div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="maxPaymentAmount" class="form-label">Maximum Payment (₱)</label>
+                        <input type="number" class="form-control" id="maxPaymentAmount" min="10" max="1000" required>
+                        <div class="form-text">Maximum allowed payment amount</div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Save Pricing Configuration</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6 mb-4">
+        <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">System Configuration</h5>
+            </div>
+            <div class="card-body">
+                <form id="configForm">
+                    <div class="mb-3">
+                        <label for="systemName" class="form-label">System Name</label>
+                        <input type="text" class="form-control" id="systemName">
+                        <div class="form-text">Name of this PisoPrint system</div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="printerName" class="form-label">Printer Name</label>
+                        <input type="text" class="form-control" id="printerName">
+                        <div class="form-text">Name of the connected printer (e.g., EPSON L121)</div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="paperCapacity" class="form-label">Paper Capacity</label>
+                        <input type="number" class="form-control" id="paperCapacity" min="100" max="1000" required>
+                        <div class="form-text">Maximum paper capacity of the printer</div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Save System Configuration</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- New Authentication Settings Section -->
+<div class="row">
+    <div class="col-md-6 mb-4">
+        <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">Authentication Settings</h5>
+            </div>
+            <div class="card-body">
+                <form id="authForm">
+                    <div class="mb-3">
+                        <label for="adminPattern" class="form-label">Admin PIN Pattern</label>
+                        <input type="text" class="form-control" id="adminPattern" pattern="[0-9,]+" required>
+                        <div class="form-text">Comma-separated numbers for admin access and password reset (e.g., 1,2,3,4)</div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="sessionTimeout" class="form-label">Session Timeout (minutes)</label>
+                        <input type="number" class="form-control" id="sessionTimeout" min="5" max="1440" value="30" required>
+                        <div class="form-text">Time before an inactive session is automatically logged out</div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Save Authentication Settings</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6 mb-4">
+        <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">User Management</h5>
+            </div>
+            <div class="card-body">
+                <p>Manage user accounts and their permissions.</p>
+                <a href="{{ url_for('users') }}" class="btn btn-primary">
+                    <i class="fas fa-users"></i> Manage Users
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Success Alert -->
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="settingsToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header bg-success text-white">
+            <i class="bi bi-check-circle me-2"></i>
+            <strong class="me-auto">Success</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body" id="settingsToastMessage">
+            Settings saved successfully!
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Initialize toast
+    const settingsToast = new bootstrap.Toast(document.getElementById('settingsToast'));
+    
+    function loadSettings() {
+        $.ajax({
+            url: '/api/settings',
+            type: 'GET',
+            dataType: 'json',
+            success: function(data) {
+                if (data.status === 'ok') {
+                    const settings = data.settings;
+                    
+                    // Fill form fields
+                    $('#priceBwPage').val(settings.price_bw_page);
+                    $('#priceColorPage').val(settings.price_color_page);
+                    $('#maxPaymentAmount').val(settings.max_payment_amount);
+                    $('#systemName').val(settings.system_name);
+                    $('#printerName').val(settings.printer_name);
+                    $('#paperCapacity').val(settings.paper_capacity);
+                    $('#adminPattern').val(settings.admin_pattern);
+                    $('#sessionTimeout').val(settings.session_timeout || 30);
+                    
+                    // Fetch paper calibration values - these would normally come from the sensor interface
+                    $.ajax({
+                        url: '/api/sensor-data',
+                        type: 'GET',
+                        dataType: 'json',
+                        success: function(sensorData) {
+                            if (sensorData.status === 'ok') {
+                                // These values are just placeholders - in a real implementation,
+                                // you would retrieve the actual calibration values from the sensor
+                                $('#emptyWeight').val(100);
+                                $('#fullWeight').val(2600);
+                                
+                                // Update sensor status
+                                updateSensorStatus();
+                            }
+                        }
+                    });
+                }
+            }
+        });
+    }
+    
+    function updateSensorStatus() {
+        // In a real implementation, you would check the actual sensor status
+        // For this demo, we'll simulate functioning sensors
+        
+        const statusBadge = '<span class="badge bg-success">Online</span>';
+        $('#paperSensorStatus').html(statusBadge);
+        $('#blackInkSensorStatus').html(statusBadge);
+        $('#cyanInkSensorStatus').html(statusBadge);
+        $('#magentaInkSensorStatus').html(statusBadge);
+        $('#yellowInkSensorStatus').html(statusBadge);
+    }
+    
+    function showToast(message) {
+        $('#settingsToastMessage').text(message);
+        settingsToast.show();
+    }
+    
+    $(document).ready(function() {
+        // Load settings on page load
+        loadSettings();
+        
+        // Refresh button
+        $('#refreshSettings').click(function() {
+            loadSettings();
+        });
+        
+        // Form submissions
+        $('#pricingForm').submit(function(e) {
+            e.preventDefault();
+            
+            const settings = {
+                price_bw_page: $('#priceBwPage').val(),
+                price_color_page: $('#priceColorPage').val(),
+                max_payment_amount: $('#maxPaymentAmount').val()
+            };
+            
+            saveSettings(settings, 'Pricing settings saved successfully');
+        });
+        
+        $('#configForm').submit(function(e) {
+            e.preventDefault();
+            
+            const settings = {
+                system_name: $('#systemName').val(),
+                printer_name: $('#printerName').val(),
+                paper_capacity: $('#paperCapacity').val()
+            };
+            
+            saveSettings(settings, 'System settings saved successfully');
+        });
+        
+        $('#authForm').submit(function(e) {
+            e.preventDefault();
+            
+            const settings = {
+                admin_pattern: $('#adminPattern').val(),
+                session_timeout: $('#sessionTimeout').val()
+            };
+            
+            saveSettings(settings, 'Authentication settings saved successfully');
+        });
+        
+        // Calibrate paper sensor (empty)
+        $('#calibrateEmptyBtn').click(function() {
+            $(this).prop('disabled', true).text('Calibrating...');
+            
+            $.ajax({
+                url: '/api/arduino',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({
+                    command: 'calibrate_empty'
+                }),
+                success: function(data) {
+                    $('#calibrateEmptyBtn').prop('disabled', false).text('Calibrate Empty');
+                    
+                    if (data.status === 'ok') {
+                        showToast('Empty tray calibration complete');
+                    } else {
+                        showToast(data.error || 'Calibration failed');
+                    }
+                },
+                error: function() {
+                    $('#calibrateEmptyBtn').prop('disabled', false).text('Calibrate Empty');
+                    showToast('Failed to communicate with device');
+                }
+            });
+        });
+        
+        // Calibrate paper sensor (full - 50 sheets)
+        $('#calibrateFullBtn').click(function() {
+            $(this).prop('disabled', true).text('Calibrating...');
+            
+            $.ajax({
+                url: '/api/arduino',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({
+                    command: 'calibrate_full'
+                }),
+                success: function(data) {
+                    $('#calibrateFullBtn').prop('disabled', false).text('Calibrate Full (50 sheets)');
+                    
+                    if (data.status === 'ok') {
+                        showToast('Full tray calibration complete');
+                    } else {
+                        showToast(data.error || 'Calibration failed');
+                    }
+                },
+                error: function() {
+                    $('#calibrateFullBtn').prop('disabled', false).text('Calibrate Full (50 sheets)');
+                    showToast('Failed to communicate with device');
+                }
+            });
+        });
+        
+        // Update sensor status display
+        function updateSensorStatus() {
+            $.ajax({
+                url: '/api/sensor-data',
+                type: 'GET',
+                dataType: 'json',
+                success: function(data) {
+                    if (data.status === 'ok') {
+                        const sensorData = data.sensor_data;
+                        const arduinoConnected = sensorData.arduino_connected === true;
+                        
+                        // Update Arduino connection status
+                        if (arduinoConnected) {
+                            $('#arduinoStatus').html('<span class="badge bg-success">Connected</span>');
+                            $('#connectArduinoBtn').addClass('d-none');
+                        } else {
+                            $('#arduinoStatus').html('<span class="badge bg-danger">Disconnected</span>');
+                            $('#connectArduinoBtn').removeClass('d-none');
+                        }
+                        
+                        // Update paper sensor status
+                        const paperSensorWorking = sensorData.paper_percentage !== undefined;
+                        $('#paperSensorStatus').html(
+                            paperSensorWorking 
+                            ? '<span class="badge bg-success">Working</span>' 
+                            : '<span class="badge bg-danger">Not Detected</span>'
+                        );
+                        
+                        // Update ink sensor statuses
+                        if (sensorData.ink_levels) {
+                            for (const color of ['black', 'cyan', 'magenta', 'yellow']) {
+                                const sensorWorking = sensorData.ink_levels[color] !== undefined;
+                                $(`#${color}InkSensorStatus`).html(
+                                    sensorWorking
+                                    ? '<span class="badge bg-success">Working</span>'
+                                    : '<span class="badge bg-danger">Not Detected</span>'
+                                );
+                            }
+                        } else {
+                            // No ink level data
+                            $('#blackInkSensorStatus, #cyanInkSensorStatus, #magentaInkSensorStatus, #yellowInkSensorStatus')
+                                .html('<span class="badge bg-danger">Not Detected</span>');
+                        }
+                    } else {
+                        // Error getting sensor data
+                        $('#arduinoStatus').html('<span class="badge bg-danger">Error</span>');
+                        $('#paperSensorStatus, #blackInkSensorStatus, #cyanInkSensorStatus, #magentaInkSensorStatus, #yellowInkSensorStatus')
+                            .html('<span class="badge bg-secondary">Unknown</span>');
+                    }
+                },
+                error: function() {
+                    // Communication error
+                    $('#arduinoStatus').html('<span class="badge bg-danger">Communication Error</span>');
+                    $('#paperSensorStatus, #blackInkSensorStatus, #cyanInkSensorStatus, #magentaInkSensorStatus, #yellowInkSensorStatus')
+                        .html('<span class="badge bg-secondary">Unknown</span>');
+                }
+            });
+        }
+        
+        // Initial sensor status update
+        updateSensorStatus();
+        
+        // Refresh sensor status button
+        $('#refreshSensorsBtn').click(function() {
+            $(this).prop('disabled', true).text('Refreshing...');
+            updateSensorStatus();
+            setTimeout(() => {
+                $(this).prop('disabled', false).text('Refresh Status');
+            }, 1000);
+        });
+        
+        // Connect Arduino button
+        $('#connectArduinoBtn').click(function() {
+            $(this).prop('disabled', true).text('Connecting...');
+            
+            $.ajax({
+                url: '/api/arduino',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({
+                    command: 'connect'
+                }),
+                success: function(data) {
+                    $('#connectArduinoBtn').prop('disabled', false).text('Connect Arduino');
+                    
+                    if (data.status === 'ok' && data.response.connected) {
+                        showToast('Arduino connected successfully');
+                        updateSensorStatus();
+                    } else {
+                        showToast('Failed to connect to Arduino');
+                    }
+                },
+                error: function() {
+                    $('#connectArduinoBtn').prop('disabled', false).text('Connect Arduino');
+                    showToast('Failed to communicate with server');
+                }
+            });
+        });
+        
+        // Update sensor status every 5 seconds
+        setInterval(updateSensorStatus, 5000);
+    });
+</script>
+{% endblock %}

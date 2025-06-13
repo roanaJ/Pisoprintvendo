@@ -1,0 +1,43 @@
+2025-02-22 19:10:49,407 - pisoprint - INFO - [STARTUP] Application starting
+2025-02-22 19:10:49,856 - pisoprint - INFO - Found SumatraPDF at: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+2025-02-22 19:10:49,913 - pisoprint - INFO - PDFPrinter initialized with printer: EPSON L120 Series
+2025-02-22 19:10:49,914 - pisoprint - INFO - SumatraPDF path: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+2025-02-22 19:10:49,928 - pisoprint - INFO - [APP_STATE] System state reset
+2025-02-22 19:10:49,928 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 19:10:50,046 - pisoprint - INFO - [NAVIGATION] Main screen displayed
+2025-02-22 19:10:50,064 - pisoprint - INFO - [APP_INIT] PisoPrint system initialized
+2025-02-22 19:10:50,065 - pisoprint - INFO - [STARTUP] Application initialized and ready
+2025-02-22 19:10:51,277 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 19:10:51,284 - pisoprint - INFO - [NAVIGATION] Receive screen displayed
+2025-02-22 19:10:58,285 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 19:10:58,373 - pisoprint - INFO - [NAVIGATION] Preview screen displayed
+2025-02-22 19:11:00,663 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 19:11:00,725 - pisoprint - INFO - [NAVIGATION] Preview screen displayed
+2025-02-22 19:11:01,582 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 19:11:01,655 - pisoprint - INFO - [NAVIGATION] Preview screen displayed
+2025-02-22 19:11:02,341 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 19:11:02,363 - pisoprint - INFO - [NAVIGATION] Selection screen displayed
+2025-02-22 19:11:05,079 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 19:11:05,096 - pisoprint - INFO - CoinAcceptor initialized with port COM4, baudrate 9600
+2025-02-22 19:11:05,096 - pisoprint - INFO - Connecting to coin acceptor on port COM4
+2025-02-22 19:11:07,102 - pisoprint - INFO - Coin reading thread started
+2025-02-22 19:11:07,102 - pisoprint - INFO - Successfully connected to coin acceptor
+2025-02-22 19:11:07,109 - pisoprint - INFO - Coin callback function set
+2025-02-22 19:11:07,110 - pisoprint - INFO - [PAYMENT] Coin acceptor connected and ready
+2025-02-22 19:11:07,145 - pisoprint - INFO - [NAVIGATION] Payment screen displayed
+2025-02-22 19:11:21,834 - pisoprint - INFO - Ignoring coin - payment already processing
+2025-02-22 19:11:23,720 - pisoprint - INFO - [NAVIGATION] Proceeding to printing with 1 copies
+2025-02-22 19:11:23,721 - pisoprint - ERROR - [CoinAcceptor] Invalid callback function (not callable)
+2025-02-22 19:11:23,777 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 19:11:23,785 - pisoprint - INFO - [NAVIGATION] Printing screen displayed
+2025-02-22 19:11:23,894 - pisoprint - INFO - [PRINT] Printing 1 copies of C:/Users/Waren/Downloads/Chapter II - Guide for Embedded Systems Project - TECHNICAL BACKGROUND.pdf
+2025-02-22 19:11:23,909 - pisoprint - INFO - Printer status: {'code': 0, 'ready': True, 'details': {}}
+2025-02-22 19:11:23,916 - pisoprint - INFO - Printing PDF: C:/Users/Waren/Downloads/Chapter II - Guide for Embedded Systems Project - TECHNICAL BACKGROUND.pdf
+2025-02-22 19:11:23,917 - pisoprint - INFO - Print command: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe -print-to EPSON L120 Series -print-settings copies=1 C:/Users/Waren/Downloads/Chapter II - Guide for Embedded Systems Project - TECHNICAL BACKGROUND.pdf
+2025-02-22 19:11:30,380 - pisoprint - INFO - [PRINT_JOB] File: Chapter II - Guide for Embedded Systems Project - TECHNICAL BACKGROUND.pdf, Copies: 1, Pages: 0
+2025-02-22 19:11:30,386 - pisoprint - INFO - Print command sent successfully
+2025-02-22 19:11:30,388 - pisoprint - INFO - [PRINT] Print job completed successfully
+2025-02-22 19:11:57,889 - pisoprint - INFO - [APP_STATE] System state reset
+2025-02-22 19:11:57,905 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 19:11:57,931 - pisoprint - INFO - [NAVIGATION] Main screen displayed
+2025-02-22 19:11:59,254 - pisoprint - INFO - [NAVIGATION] Screen cleared

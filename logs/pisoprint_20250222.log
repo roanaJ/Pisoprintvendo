@@ -1,0 +1,418 @@
+[2025-02-22 22:15:06,694] [INFO] STARTUP: Application starting
+[2025-02-22 22:26:03,995] [INFO] STARTUP: Application starting
+[2025-02-22 22:28:53,005] [INFO] STARTUP: Application starting
+[2025-02-22 22:31:20,167] [INFO] STARTUP: Application starting
+[2025-02-22 22:31:22,864] [DEBUG] SumatraPDF not found in registry
+[2025-02-22 22:31:22,864] [INFO] Found SumatraPDF at: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-22 22:31:22,866] [INFO] PDFPrinter initialized with printer: EPSON L120 Series
+[2025-02-22 22:31:22,866] [INFO] SumatraPDF path: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-22 22:31:22,868] [INFO] STARTUP: Application initialized and ready
+[2025-02-22 22:32:08,573] [INFO] CoinAcceptor initialized with port COM4, baudrate 9600
+[2025-02-22 22:32:08,574] [INFO] Connecting to coin acceptor on port COM4
+[2025-02-22 22:32:10,577] [DEBUG] Test read from coin acceptor: b'Coin Accep'
+[2025-02-22 22:32:10,580] [INFO] Coin reading thread started
+[2025-02-22 22:32:10,580] [INFO] Successfully connected to coin acceptor
+[2025-02-22 22:32:10,583] [DEBUG] Received from coin acceptor: tor Ready
+[2025-02-22 22:32:10,585] [INFO] Coin callback function set
+[2025-02-22 22:32:10,586] [INFO] PAYMENT: Coin acceptor connected and ready
+[2025-02-22 22:32:21,020] [DEBUG] Received from coin acceptor: COIN:1
+[2025-02-22 22:32:21,187] [DEBUG] Received from coin acceptor: COIN:1
+[2025-02-22 22:32:21,353] [DEBUG] Received from coin acceptor: COIN:1
+[2025-02-22 22:32:21,570] [DEBUG] Received from coin acceptor: COIN:1
+[2025-02-22 22:32:21,592] [INFO] Ignoring coin - payment already processing
+[2025-02-22 22:32:21,693] [DEBUG] Received from coin acceptor: COIN:1
+[2025-02-22 22:32:21,706] [INFO] Ignoring coin - payment already processing
+[2025-02-22 22:32:21,821] [DEBUG] Received from coin acceptor: COIN:1
+[2025-02-22 22:32:21,869] [INFO] Ignoring coin - payment already processing
+[2025-02-22 22:32:21,971] [DEBUG] Received from coin acceptor: COIN:1
+[2025-02-22 22:32:22,000] [INFO] Ignoring coin - payment already processing
+[2025-02-22 22:32:22,102] [DEBUG] Received from coin acceptor: COIN:1
+[2025-02-22 22:32:22,116] [INFO] Ignoring coin - payment already processing
+[2025-02-22 22:32:22,218] [DEBUG] Received from coin acceptor: COIN:1
+[2025-02-22 22:32:22,298] [INFO] Ignoring coin - payment already processing
+[2025-02-22 22:32:22,400] [DEBUG] Received from coin acceptor: COIN:1
+[2025-02-22 22:32:22,416] [INFO] Ignoring coin - payment already processing
+[2025-02-22 22:32:23,473] [INFO] NAVIGATION: Proceeding to printing with 1 copies
+[2025-02-22 22:32:23,474] [ERROR] CoinAcceptor: Invalid callback function (not callable)
+[2025-02-22 22:32:23,667] [INFO] Printer status: {'code': 0, 'ready': True, 'details': {}}
+[2025-02-22 22:32:23,669] [INFO] Printing PDF: C:/Users/Waren/Downloads/Chapter I - Guide for Embedded Systems Project.pdf
+[2025-02-22 22:32:23,670] [INFO] Print command: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe -print-to EPSON L120 Series -print-settings copies=1 C:/Users/Waren/Downloads/Chapter I - Guide for Embedded Systems Project.pdf
+[2025-02-22 22:32:26,710] [INFO] PRINT_JOB: Chapter I - Guide for Embedded Systems Project.pdf, 1 copies, 0 pages
+[2025-02-22 22:32:26,714] [INFO] Print command sent successfully
+[2025-02-22 22:36:16,449] [INFO] STARTUP: Application starting
+[2025-02-22 22:36:19,108] [DEBUG] SumatraPDF not found in registry
+[2025-02-22 22:36:19,109] [INFO] Found SumatraPDF at: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-22 22:36:19,109] [INFO] PDFPrinter initialized with printer: EPSON L120 Series
+[2025-02-22 22:36:19,110] [INFO] SumatraPDF path: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-22 22:36:19,111] [INFO] STARTUP: Application initialized and ready
+[2025-02-22 22:52:04,563] [INFO] STARTUP: Application starting
+[2025-02-22 22:52:07,286] [DEBUG] SumatraPDF not found in registry
+[2025-02-22 22:52:07,286] [INFO] Found SumatraPDF at: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-22 22:52:07,288] [INFO] PDFPrinter initialized with printer: EPSON L120 Series
+[2025-02-22 22:52:07,289] [INFO] SumatraPDF path: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-22 22:52:07,293] [INFO] Connecting to Arduino on port COM4
+[2025-02-22 22:52:07,295] [ERROR] ArduinoInterface: Error connecting to Arduino: could not open port 'COM4': PermissionError(13, 'Access is denied.', None, 5)
+[2025-02-22 22:52:07,308] [INFO] STARTUP: Application initialized and ready
+[2025-02-22 22:52:54,258] [ERROR] PAYMENT: Error setting up coin acceptor: 'PisoPrintSystem' object has no attribute 'coin_acceptor'
+[2025-02-22 22:53:23,279] [INFO] NAVIGATION: Proceeding to printing with 1 copies
+[2025-02-22 22:53:23,462] [INFO] Printer status: {'code': 0, 'ready': True, 'details': {}}
+[2025-02-22 22:53:23,464] [INFO] Printing PDF: C:/Users/Waren/Downloads/Chapter III - Part2 Continuation_Guide for Embedded Systems Project - METHODOLOGY.pdf
+[2025-02-22 22:53:23,465] [INFO] Print command: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe -print-to EPSON L120 Series -print-settings copies=1 C:/Users/Waren/Downloads/Chapter III - Part2 Continuation_Guide for Embedded Systems Project - METHODOLOGY.pdf
+[2025-02-22 22:54:00,752] [INFO] PRINT_JOB: Chapter III - Part2 Continuation_Guide for Embedded Systems Project - METHODOLOGY.pdf, 1 copies, 0 pages
+[2025-02-22 22:54:00,754] [INFO] Print command sent successfully
+[2025-02-22 22:56:54,253] [INFO] STARTUP: Application starting
+[2025-02-22 22:56:56,997] [DEBUG] SumatraPDF not found in registry
+[2025-02-22 22:56:56,998] [INFO] Found SumatraPDF at: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-22 22:56:56,998] [INFO] PDFPrinter initialized with printer: EPSON L120 Series
+[2025-02-22 22:56:56,998] [INFO] SumatraPDF path: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-22 22:56:57,001] [INFO] Connecting to Arduino on port COM4
+[2025-02-22 22:56:57,002] [ERROR] ArduinoInterface: Error connecting to Arduino: could not open port 'COM4': PermissionError(13, 'Access is denied.', None, 5)
+[2025-02-22 22:56:57,015] [INFO] STARTUP: Application initialized and ready
+[2025-02-22 22:58:42,034] [INFO] STARTUP: Application starting
+[2025-02-22 22:58:44,739] [DEBUG] SumatraPDF not found in registry
+[2025-02-22 22:58:44,739] [INFO] Found SumatraPDF at: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-22 22:58:44,740] [INFO] PDFPrinter initialized with printer: EPSON L120 Series
+[2025-02-22 22:58:44,740] [INFO] SumatraPDF path: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-22 22:58:44,742] [INFO] Connecting to Arduino on port COM4
+[2025-02-22 22:58:44,743] [ERROR] ArduinoInterface: Error connecting to Arduino: could not open port 'COM4': PermissionError(13, 'Access is denied.', None, 5)
+[2025-02-22 22:58:44,755] [INFO] STARTUP: Application initialized and ready
+[2025-02-22 22:59:07,285] [ERROR] PAYMENT: Error setting up coin acceptor: 'PisoPrintSystem' object has no attribute 'coin_acceptor'
+[2025-02-22 22:59:33,975] [INFO] PAYMENT: Payment cancelled. No coins inserted.
+[2025-02-22 23:08:37,045] [INFO] STARTUP: Application starting
+[2025-02-22 23:08:39,711] [DEBUG] SumatraPDF not found in registry
+[2025-02-22 23:08:39,711] [INFO] Found SumatraPDF at: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-22 23:08:39,712] [INFO] PDFPrinter initialized with printer: EPSON L120 Series
+[2025-02-22 23:08:39,713] [INFO] SumatraPDF path: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-22 23:08:39,715] [INFO] Connecting to Arduino on port COM4
+[2025-02-22 23:08:41,722] [WARNING] Unexpected response from Arduino: PisoPrint Arduino Ready
+[2025-02-22 23:08:41,726] [INFO] Successfully connected to Arduino
+[2025-02-22 23:08:41,727] [INFO] STARTUP: Application initialized and ready
+[2025-02-22 23:08:41,859] [DEBUG] Received from Arduino: PONG
+[2025-02-22 23:08:44,068] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:08:44,069] [INFO] Admin button pressed
+[2025-02-22 23:08:44,070] [INFO] Calling admin callback
+[2025-02-22 23:10:54,818] [INFO] STARTUP: Application starting
+[2025-02-22 23:10:57,447] [DEBUG] SumatraPDF not found in registry
+[2025-02-22 23:10:57,448] [INFO] Found SumatraPDF at: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-22 23:10:57,448] [INFO] PDFPrinter initialized with printer: EPSON L120 Series
+[2025-02-22 23:10:57,448] [INFO] SumatraPDF path: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-22 23:10:57,450] [INFO] Connecting to Arduino on port COM4
+[2025-02-22 23:10:59,455] [WARNING] Unexpected response from Arduino: PisoPrint Arduino Ready
+[2025-02-22 23:10:59,457] [INFO] Successfully connected to Arduino
+[2025-02-22 23:10:59,458] [INFO] STARTUP: Application initialized and ready
+[2025-02-22 23:10:59,569] [DEBUG] Received from Arduino: PONG
+[2025-02-22 23:11:05,394] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:11:05,394] [INFO] Admin button pressed
+[2025-02-22 23:11:05,395] [INFO] Calling admin callback
+[2025-02-22 23:11:18,257] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:11:18,257] [INFO] Admin button pressed
+[2025-02-22 23:11:18,258] [INFO] Calling admin callback
+[2025-02-22 23:11:19,081] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:11:19,081] [INFO] Admin button pressed
+[2025-02-22 23:11:19,082] [INFO] Calling admin callback
+[2025-02-22 23:11:19,563] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:11:19,564] [INFO] Admin button pressed
+[2025-02-22 23:11:19,564] [INFO] Calling admin callback
+[2025-02-22 23:11:20,240] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:11:20,240] [INFO] Admin button pressed
+[2025-02-22 23:11:20,242] [INFO] Calling admin callback
+[2025-02-22 23:11:21,420] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:11:21,421] [INFO] Admin button pressed
+[2025-02-22 23:11:21,422] [INFO] Calling admin callback
+[2025-02-22 23:11:22,161] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:11:22,162] [INFO] Admin button pressed
+[2025-02-22 23:11:22,163] [INFO] Calling admin callback
+[2025-02-22 23:11:23,006] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:11:23,006] [INFO] Admin button pressed
+[2025-02-22 23:11:23,007] [INFO] Calling admin callback
+[2025-02-22 23:11:23,649] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:11:23,649] [INFO] Admin button pressed
+[2025-02-22 23:11:23,650] [INFO] Calling admin callback
+[2025-02-22 23:11:24,306] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:11:24,307] [INFO] Admin button pressed
+[2025-02-22 23:11:24,308] [INFO] Calling admin callback
+[2025-02-22 23:11:24,950] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:11:24,951] [INFO] Admin button pressed
+[2025-02-22 23:11:24,954] [INFO] Calling admin callback
+[2025-02-22 23:11:25,606] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:11:25,606] [INFO] Admin button pressed
+[2025-02-22 23:11:25,611] [INFO] Calling admin callback
+[2025-02-22 23:11:26,475] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:11:26,475] [INFO] Admin button pressed
+[2025-02-22 23:11:26,476] [INFO] Calling admin callback
+[2025-02-22 23:11:27,123] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:11:27,124] [INFO] Admin button pressed
+[2025-02-22 23:11:27,125] [INFO] Calling admin callback
+[2025-02-22 23:11:27,895] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:11:27,895] [INFO] Admin button pressed
+[2025-02-22 23:11:27,896] [INFO] Calling admin callback
+[2025-02-22 23:11:28,647] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:11:28,648] [INFO] Admin button pressed
+[2025-02-22 23:11:28,649] [INFO] Calling admin callback
+[2025-02-22 23:11:29,716] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:11:29,717] [INFO] Admin button pressed
+[2025-02-22 23:11:29,718] [INFO] Calling admin callback
+[2025-02-22 23:11:30,407] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:11:30,408] [INFO] Admin button pressed
+[2025-02-22 23:11:30,409] [INFO] Calling admin callback
+[2025-02-22 23:11:32,137] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:11:32,138] [INFO] Admin button pressed
+[2025-02-22 23:11:32,139] [INFO] Calling admin callback
+[2025-02-22 23:11:34,399] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:11:34,400] [INFO] Admin button pressed
+[2025-02-22 23:11:34,401] [INFO] Calling admin callback
+[2025-02-22 23:11:35,364] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:11:35,364] [INFO] Admin button pressed
+[2025-02-22 23:11:35,365] [INFO] Calling admin callback
+[2025-02-22 23:11:36,134] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:11:36,135] [INFO] Admin button pressed
+[2025-02-22 23:11:36,136] [INFO] Calling admin callback
+[2025-02-22 23:11:36,787] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:11:36,787] [INFO] Admin button pressed
+[2025-02-22 23:11:36,788] [INFO] Calling admin callback
+[2025-02-22 23:11:37,343] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:11:37,344] [INFO] Admin button pressed
+[2025-02-22 23:11:37,345] [INFO] Calling admin callback
+[2025-02-22 23:11:38,077] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:11:38,078] [INFO] Admin button pressed
+[2025-02-22 23:11:38,080] [INFO] Calling admin callback
+[2025-02-22 23:11:39,169] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:11:39,169] [INFO] Admin button pressed
+[2025-02-22 23:11:39,170] [INFO] Calling admin callback
+[2025-02-22 23:11:40,009] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:11:40,009] [INFO] Admin button pressed
+[2025-02-22 23:11:40,010] [INFO] Calling admin callback
+[2025-02-22 23:11:47,772] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:11:47,772] [INFO] Admin button pressed
+[2025-02-22 23:11:47,773] [INFO] Calling admin callback
+[2025-02-22 23:11:48,546] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:11:48,546] [INFO] Admin button pressed
+[2025-02-22 23:11:48,547] [INFO] Calling admin callback
+[2025-02-22 23:12:14,957] [INFO] STARTUP: Application starting
+[2025-02-22 23:12:17,569] [DEBUG] SumatraPDF not found in registry
+[2025-02-22 23:12:17,569] [INFO] Found SumatraPDF at: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-22 23:12:17,569] [INFO] PDFPrinter initialized with printer: EPSON L120 Series
+[2025-02-22 23:12:17,570] [INFO] SumatraPDF path: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-22 23:12:17,572] [INFO] Connecting to Arduino on port COM4
+[2025-02-22 23:12:19,578] [WARNING] Unexpected response from Arduino: PisoPrint Arduino Ready
+[2025-02-22 23:12:19,582] [INFO] Successfully connected to Arduino
+[2025-02-22 23:12:19,583] [INFO] STARTUP: Application initialized and ready
+[2025-02-22 23:12:19,683] [DEBUG] Received from Arduino: PONG
+[2025-02-22 23:12:48,548] [INFO] PAYMENT: Coin acceptor ready via Arduino
+[2025-02-22 23:12:59,398] [DEBUG] Received from Arduino: COIN:10
+[2025-02-22 23:12:59,399] [INFO] Coin detected: 10
+[2025-02-22 23:13:29,303] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:13:29,304] [INFO] Admin button pressed
+[2025-02-22 23:13:29,305] [INFO] Calling admin callback
+[2025-02-22 23:24:35,088] [INFO] STARTUP: Application starting
+[2025-02-22 23:24:37,827] [DEBUG] SumatraPDF not found in registry
+[2025-02-22 23:24:37,828] [INFO] Found SumatraPDF at: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-22 23:24:37,828] [INFO] PDFPrinter initialized with printer: EPSON L120 Series
+[2025-02-22 23:24:37,828] [INFO] SumatraPDF path: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-22 23:24:37,831] [INFO] Connecting to Arduino on port COM4
+[2025-02-22 23:24:39,835] [WARNING] Unexpected response from Arduino: PisoPrint Arduino Ready
+[2025-02-22 23:24:39,847] [INFO] Successfully connected to Arduino
+[2025-02-22 23:24:39,848] [INFO] STARTUP: Application initialized and ready
+[2025-02-22 23:24:40,008] [DEBUG] Received from Arduino: PONG
+[2025-02-22 23:24:52,559] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:24:52,560] [INFO] Admin button pressed
+[2025-02-22 23:24:52,560] [INFO] Calling admin callback
+[2025-02-22 23:37:17,499] [INFO] STARTUP: Application starting
+[2025-02-22 23:37:20,199] [DEBUG] SumatraPDF not found in registry
+[2025-02-22 23:37:20,200] [INFO] Found SumatraPDF at: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-22 23:37:20,203] [INFO] PDFPrinter initialized with printer: EPSON L120 Series
+[2025-02-22 23:37:20,204] [INFO] SumatraPDF path: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-22 23:37:20,206] [INFO] Connecting to Arduino on port COM4
+[2025-02-22 23:37:22,212] [WARNING] Unexpected response from Arduino: PisoPrint Arduino Ready
+[2025-02-22 23:37:22,216] [INFO] Successfully connected to Arduino
+[2025-02-22 23:37:22,218] [INFO] STARTUP: Application initialized and ready
+[2025-02-22 23:37:22,391] [DEBUG] Received from Arduino: PONG
+[2025-02-22 23:37:31,833] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:37:31,834] [INFO] Admin button pressed
+[2025-02-22 23:37:31,834] [INFO] Calling admin callback
+[2025-02-22 23:37:53,229] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:37:53,229] [INFO] Admin button pressed
+[2025-02-22 23:37:53,230] [INFO] Calling admin callback
+[2025-02-22 23:38:42,165] [INFO] STARTUP: Application starting
+[2025-02-22 23:38:44,913] [DEBUG] SumatraPDF not found in registry
+[2025-02-22 23:38:44,913] [INFO] Found SumatraPDF at: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-22 23:38:44,914] [INFO] PDFPrinter initialized with printer: EPSON L120 Series
+[2025-02-22 23:38:44,914] [INFO] SumatraPDF path: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-22 23:38:44,916] [INFO] Connecting to Arduino on port COM4
+[2025-02-22 23:38:46,922] [WARNING] Unexpected response from Arduino: PisoPrint Arduino Ready
+[2025-02-22 23:38:46,926] [INFO] Successfully connected to Arduino
+[2025-02-22 23:38:46,928] [INFO] STARTUP: Application initialized and ready
+[2025-02-22 23:38:47,067] [DEBUG] Received from Arduino: PONG
+[2025-02-22 23:38:57,507] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:38:57,508] [INFO] Admin button pressed
+[2025-02-22 23:38:57,508] [INFO] Calling admin callback
+[2025-02-22 23:39:15,872] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:39:15,872] [INFO] Admin button pressed
+[2025-02-22 23:39:15,873] [INFO] Calling admin callback
+[2025-02-22 23:39:16,533] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:39:16,533] [INFO] Admin button pressed
+[2025-02-22 23:39:16,534] [INFO] Calling admin callback
+[2025-02-22 23:39:17,165] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:39:17,165] [INFO] Admin button pressed
+[2025-02-22 23:39:17,168] [INFO] Calling admin callback
+[2025-02-22 23:39:17,853] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:39:17,854] [INFO] Admin button pressed
+[2025-02-22 23:39:17,854] [INFO] Calling admin callback
+[2025-02-22 23:39:18,736] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:39:18,737] [INFO] Admin button pressed
+[2025-02-22 23:39:18,738] [INFO] Calling admin callback
+[2025-02-22 23:39:19,421] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:39:19,422] [INFO] Admin button pressed
+[2025-02-22 23:39:19,423] [INFO] Calling admin callback
+[2025-02-22 23:39:20,144] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:39:20,145] [INFO] Admin button pressed
+[2025-02-22 23:39:20,146] [INFO] Calling admin callback
+[2025-02-22 23:39:20,810] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:39:20,811] [INFO] Admin button pressed
+[2025-02-22 23:39:20,812] [INFO] Calling admin callback
+[2025-02-22 23:39:21,479] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:39:21,479] [INFO] Admin button pressed
+[2025-02-22 23:39:21,480] [INFO] Calling admin callback
+[2025-02-22 23:40:40,041] [INFO] STARTUP: Application starting
+[2025-02-22 23:40:42,698] [DEBUG] SumatraPDF not found in registry
+[2025-02-22 23:40:42,699] [INFO] Found SumatraPDF at: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-22 23:40:42,699] [INFO] PDFPrinter initialized with printer: EPSON L120 Series
+[2025-02-22 23:40:42,699] [INFO] SumatraPDF path: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-22 23:40:42,701] [INFO] Connecting to Arduino on port COM4
+[2025-02-22 23:40:44,707] [WARNING] Unexpected response from Arduino: PisoPrint Arduino Ready
+[2025-02-22 23:40:44,712] [INFO] Successfully connected to Arduino
+[2025-02-22 23:40:44,714] [INFO] STARTUP: Application initialized and ready
+[2025-02-22 23:40:44,856] [DEBUG] Received from Arduino: PONG
+[2025-02-22 23:40:47,269] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:40:47,269] [INFO] Admin button pressed
+[2025-02-22 23:40:47,318] [INFO] Calling admin callback
+[2025-02-22 23:42:58,969] [INFO] STARTUP: Application starting
+[2025-02-22 23:43:01,825] [DEBUG] SumatraPDF not found in registry
+[2025-02-22 23:43:01,826] [INFO] Found SumatraPDF at: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-22 23:43:01,826] [INFO] PDFPrinter initialized with printer: EPSON L120 Series
+[2025-02-22 23:43:01,826] [INFO] SumatraPDF path: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-22 23:43:01,829] [INFO] Connecting to Arduino on port COM4
+[2025-02-22 23:43:03,835] [WARNING] Unexpected response from Arduino: PisoPrint Arduino Ready
+[2025-02-22 23:43:03,839] [INFO] Successfully connected to Arduino
+[2025-02-22 23:43:03,840] [INFO] STARTUP: Application initialized and ready
+[2025-02-22 23:43:03,970] [DEBUG] Received from Arduino: PONG
+[2025-02-22 23:43:06,180] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:43:06,181] [INFO] Admin button pressed
+[2025-02-22 23:43:06,181] [INFO] Calling admin callback
+[2025-02-22 23:43:43,802] [INFO] STARTUP: Application starting
+[2025-02-22 23:43:46,084] [DEBUG] SumatraPDF not found in registry
+[2025-02-22 23:43:46,085] [INFO] Found SumatraPDF at: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-22 23:43:46,085] [INFO] PDFPrinter initialized with printer: EPSON L120 Series
+[2025-02-22 23:43:46,086] [INFO] SumatraPDF path: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-22 23:43:46,088] [INFO] Connecting to Arduino on port COM4
+[2025-02-22 23:43:48,093] [WARNING] Unexpected response from Arduino: PisoPrint Arduino Ready
+[2025-02-22 23:43:48,097] [INFO] Successfully connected to Arduino
+[2025-02-22 23:43:48,099] [INFO] STARTUP: Application initialized and ready
+[2025-02-22 23:43:48,201] [DEBUG] Received from Arduino: PONG
+[2025-02-22 23:44:53,146] [INFO] SHUTDOWN: Application exiting
+[2025-02-22 23:45:01,487] [INFO] STARTUP: Application starting
+[2025-02-22 23:45:03,801] [DEBUG] SumatraPDF not found in registry
+[2025-02-22 23:45:03,801] [INFO] Found SumatraPDF at: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-22 23:45:03,802] [INFO] PDFPrinter initialized with printer: EPSON L120 Series
+[2025-02-22 23:45:03,803] [INFO] SumatraPDF path: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-22 23:45:03,808] [INFO] Connecting to Arduino on port COM4
+[2025-02-22 23:45:05,815] [WARNING] Unexpected response from Arduino: PisoPrint Arduino Ready
+[2025-02-22 23:45:05,820] [INFO] Successfully connected to Arduino
+[2025-02-22 23:45:05,822] [INFO] STARTUP: Application initialized and ready
+[2025-02-22 23:45:05,923] [DEBUG] Received from Arduino: PONG
+[2025-02-22 23:45:30,188] [INFO] SHUTDOWN: Application exiting
+[2025-02-22 23:54:39,822] [INFO] STARTUP: Application starting
+[2025-02-22 23:54:42,607] [DEBUG] SumatraPDF not found in registry
+[2025-02-22 23:54:42,608] [INFO] Found SumatraPDF at: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-22 23:54:42,608] [INFO] PDFPrinter initialized with printer: EPSON L120 Series
+[2025-02-22 23:54:42,609] [INFO] SumatraPDF path: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+[2025-02-22 23:54:42,610] [INFO] Connecting to Arduino on port COM4
+[2025-02-22 23:54:44,617] [WARNING] Unexpected response from Arduino: PisoPrint Arduino Ready
+[2025-02-22 23:54:44,621] [INFO] Successfully connected to Arduino
+[2025-02-22 23:54:44,622] [INFO] STARTUP: Application initialized and ready
+[2025-02-22 23:54:44,760] [DEBUG] Received from Arduino: PONG
+[2025-02-22 23:54:45,666] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:54:45,666] [INFO] Admin button pressed
+[2025-02-22 23:54:45,667] [INFO] Calling admin callback
+[2025-02-22 23:56:08,606] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:56:08,607] [INFO] Admin button pressed
+[2025-02-22 23:56:08,607] [INFO] Calling admin callback
+[2025-02-22 23:56:09,960] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:56:09,960] [INFO] Admin button pressed
+[2025-02-22 23:56:09,961] [INFO] Calling admin callback
+[2025-02-22 23:56:10,661] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:56:10,661] [INFO] Admin button pressed
+[2025-02-22 23:56:10,662] [INFO] Calling admin callback
+[2025-02-22 23:56:11,325] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:56:11,325] [INFO] Admin button pressed
+[2025-02-22 23:56:11,331] [INFO] Calling admin callback
+[2025-02-22 23:56:12,055] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:56:12,055] [INFO] Admin button pressed
+[2025-02-22 23:56:12,056] [INFO] Calling admin callback
+[2025-02-22 23:56:12,728] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:56:12,728] [INFO] Admin button pressed
+[2025-02-22 23:56:12,729] [INFO] Calling admin callback
+[2025-02-22 23:56:13,479] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:56:13,480] [INFO] Admin button pressed
+[2025-02-22 23:56:13,484] [INFO] Calling admin callback
+[2025-02-22 23:56:14,224] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:56:14,224] [INFO] Admin button pressed
+[2025-02-22 23:56:14,225] [INFO] Calling admin callback
+[2025-02-22 23:56:14,843] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:56:14,844] [INFO] Admin button pressed
+[2025-02-22 23:56:14,845] [INFO] Calling admin callback
+[2025-02-22 23:56:15,550] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:56:15,551] [INFO] Admin button pressed
+[2025-02-22 23:56:15,555] [INFO] Calling admin callback
+[2025-02-22 23:56:16,175] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:56:16,176] [INFO] Admin button pressed
+[2025-02-22 23:56:16,177] [INFO] Calling admin callback
+[2025-02-22 23:56:17,122] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:56:17,122] [INFO] Admin button pressed
+[2025-02-22 23:56:17,122] [INFO] Calling admin callback
+[2025-02-22 23:56:17,895] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:56:17,895] [INFO] Admin button pressed
+[2025-02-22 23:56:17,896] [INFO] Calling admin callback
+[2025-02-22 23:56:18,522] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:56:18,523] [INFO] Admin button pressed
+[2025-02-22 23:56:18,524] [INFO] Calling admin callback
+[2025-02-22 23:56:19,100] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:56:19,100] [INFO] Admin button pressed
+[2025-02-22 23:56:19,101] [INFO] Calling admin callback
+[2025-02-22 23:56:19,664] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:56:19,665] [INFO] Admin button pressed
+[2025-02-22 23:56:19,666] [INFO] Calling admin callback
+[2025-02-22 23:56:20,315] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:56:20,315] [INFO] Admin button pressed
+[2025-02-22 23:56:20,316] [INFO] Calling admin callback
+[2025-02-22 23:56:21,195] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:56:21,196] [INFO] Admin button pressed
+[2025-02-22 23:56:21,197] [INFO] Calling admin callback
+[2025-02-22 23:56:21,702] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:56:21,703] [INFO] Admin button pressed
+[2025-02-22 23:56:21,704] [INFO] Calling admin callback
+[2025-02-22 23:56:43,367] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:56:43,368] [INFO] Admin button pressed
+[2025-02-22 23:56:43,369] [INFO] Calling admin callback
+[2025-02-22 23:57:27,008] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:57:27,008] [INFO] Admin button pressed
+[2025-02-22 23:57:27,009] [INFO] Calling admin callback
+[2025-02-22 23:58:12,085] [INFO] PAYMENT: Coin acceptor ready via Arduino
+[2025-02-22 23:58:27,381] [DEBUG] Received from Arduino: COIN:10
+[2025-02-22 23:58:27,381] [INFO] Coin detected: 10
+[2025-02-22 23:58:34,785] [DEBUG] Received from Arduino: COIN:10
+[2025-02-22 23:58:34,785] [INFO] Coin detected: 10
+[2025-02-22 23:58:41,982] [DEBUG] Received from Arduino: COIN:10
+[2025-02-22 23:58:41,982] [INFO] Coin detected: 10
+[2025-02-22 23:58:44,093] [INFO] NAVIGATION: Proceeding to printing with 1 copies
+[2025-02-22 23:58:44,287] [INFO] Printer status: {'code': 0, 'ready': True, 'details': {}}
+[2025-02-22 23:58:44,289] [INFO] Printing PDF: C:/Users/Waren/Downloads/Chapter II - Guide for Embedded Systems Project - TECHNICAL BACKGROUND.pdf
+[2025-02-22 23:58:44,290] [INFO] Print command: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe -print-to EPSON L120 Series -print-settings copies=1 C:/Users/Waren/Downloads/Chapter II - Guide for Embedded Systems Project - TECHNICAL BACKGROUND.pdf
+[2025-02-22 23:58:50,519] [INFO] PRINT_JOB: Chapter II - Guide for Embedded Systems Project - TECHNICAL BACKGROUND.pdf, 1 copies, 0 pages
+[2025-02-22 23:58:50,524] [INFO] Print command sent successfully
+[2025-02-22 23:59:07,802] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-22 23:59:07,802] [INFO] Admin button pressed
+[2025-02-22 23:59:07,803] [INFO] Calling admin callback
+[2025-02-23 00:00:21,341] [DEBUG] Received from Arduino: ADMIN:1
+[2025-02-23 00:00:21,342] [INFO] Admin button pressed
+[2025-02-23 00:00:21,343] [INFO] Calling admin callback

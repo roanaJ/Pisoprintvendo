@@ -1,0 +1,99 @@
+2025-02-22 21:03:43,172 - pisoprint - INFO - [STARTUP] Application starting
+2025-02-22 21:03:43,681 - pisoprint - INFO - Found SumatraPDF at: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+2025-02-22 21:03:43,826 - pisoprint - INFO - PDFPrinter initialized with printer: EPSON L120 Series
+2025-02-22 21:03:43,826 - pisoprint - INFO - SumatraPDF path: C:\Users\Waren\AppData\Local\SumatraPDF\SumatraPDF.exe
+2025-02-22 21:03:43,827 - pisoprint - INFO - [APP_STATE] System state reset
+2025-02-22 21:03:43,834 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 21:03:43,949 - pisoprint - INFO - [NAVIGATION] Main screen displayed
+2025-02-22 21:03:44,066 - pisoprint - INFO - [APP_INIT] PisoPrint system initialized
+2025-02-22 21:03:44,067 - pisoprint - INFO - [STARTUP] Application initialized and ready
+2025-02-22 21:03:45,108 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 21:03:57,510 - pisoprint - INFO - [APP_STATE] System state reset
+2025-02-22 21:03:57,559 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 21:03:57,584 - pisoprint - INFO - [NAVIGATION] Main screen displayed
+2025-02-22 21:03:59,434 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 21:03:59,441 - pisoprint - INFO - [NAVIGATION] Receive screen displayed
+2025-02-22 21:04:05,042 - pisoprint - INFO - [APP_STATE] System state reset
+2025-02-22 21:04:05,055 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 21:04:05,079 - pisoprint - INFO - [NAVIGATION] Main screen displayed
+2025-02-22 21:04:05,253 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 21:04:05,260 - pisoprint - INFO - [NAVIGATION] Receive screen displayed
+2025-02-22 21:04:06,157 - pisoprint - INFO - [APP_STATE] System state reset
+2025-02-22 21:04:06,173 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 21:04:06,200 - pisoprint - INFO - [NAVIGATION] Main screen displayed
+2025-02-22 21:04:07,385 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 21:04:07,395 - pisoprint - INFO - [NAVIGATION] Receive screen displayed
+2025-02-22 21:04:08,205 - pisoprint - INFO - [APP_STATE] System state reset
+2025-02-22 21:04:08,221 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 21:04:08,248 - pisoprint - INFO - [NAVIGATION] Main screen displayed
+2025-02-22 21:04:08,721 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 21:04:08,730 - pisoprint - INFO - [NAVIGATION] Receive screen displayed
+2025-02-22 21:04:08,818 - pisoprint - INFO - [APP_STATE] System state reset
+2025-02-22 21:04:08,833 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 21:04:08,857 - pisoprint - INFO - [NAVIGATION] Main screen displayed
+2025-02-22 21:04:08,966 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 21:04:08,975 - pisoprint - INFO - [NAVIGATION] Receive screen displayed
+2025-02-22 21:04:09,099 - pisoprint - INFO - [APP_STATE] System state reset
+2025-02-22 21:04:09,115 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 21:04:09,140 - pisoprint - INFO - [NAVIGATION] Main screen displayed
+2025-02-22 21:04:09,260 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 21:04:09,271 - pisoprint - INFO - [NAVIGATION] Receive screen displayed
+2025-02-22 21:04:09,468 - pisoprint - INFO - [APP_STATE] System state reset
+2025-02-22 21:04:09,483 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 21:04:09,509 - pisoprint - INFO - [NAVIGATION] Main screen displayed
+2025-02-22 21:04:09,739 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 21:04:09,748 - pisoprint - INFO - [NAVIGATION] Receive screen displayed
+2025-02-22 21:04:09,907 - pisoprint - INFO - [APP_STATE] System state reset
+2025-02-22 21:04:09,924 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 21:04:09,948 - pisoprint - INFO - [NAVIGATION] Main screen displayed
+2025-02-22 21:04:10,117 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 21:04:10,127 - pisoprint - INFO - [NAVIGATION] Receive screen displayed
+2025-02-22 21:04:15,913 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 21:04:16,026 - pisoprint - INFO - [NAVIGATION] Preview screen displayed
+2025-02-22 21:04:18,088 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 21:04:18,149 - pisoprint - INFO - [NAVIGATION] Preview screen displayed
+2025-02-22 21:04:18,593 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 21:04:18,650 - pisoprint - INFO - [NAVIGATION] Preview screen displayed
+2025-02-22 21:04:19,000 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 21:04:19,087 - pisoprint - INFO - [NAVIGATION] Preview screen displayed
+2025-02-22 21:04:19,278 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 21:04:19,358 - pisoprint - INFO - [NAVIGATION] Preview screen displayed
+2025-02-22 21:04:19,658 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 21:04:19,730 - pisoprint - INFO - [NAVIGATION] Preview screen displayed
+2025-02-22 21:04:20,038 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 21:04:20,111 - pisoprint - INFO - [NAVIGATION] Preview screen displayed
+2025-02-22 21:04:20,397 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 21:04:20,474 - pisoprint - INFO - [NAVIGATION] Preview screen displayed
+2025-02-22 21:04:20,727 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 21:04:20,797 - pisoprint - INFO - [NAVIGATION] Preview screen displayed
+2025-02-22 21:04:21,096 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 21:04:21,174 - pisoprint - INFO - [NAVIGATION] Preview screen displayed
+2025-02-22 21:04:21,440 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 21:04:21,531 - pisoprint - INFO - [NAVIGATION] Preview screen displayed
+2025-02-22 21:04:21,758 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 21:04:21,830 - pisoprint - INFO - [NAVIGATION] Preview screen displayed
+2025-02-22 21:04:22,088 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 21:04:22,148 - pisoprint - INFO - [NAVIGATION] Preview screen displayed
+2025-02-22 21:04:22,432 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 21:04:22,490 - pisoprint - INFO - [NAVIGATION] Preview screen displayed
+2025-02-22 21:04:22,787 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 21:04:22,844 - pisoprint - INFO - [NAVIGATION] Preview screen displayed
+2025-02-22 21:04:23,088 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 21:04:23,151 - pisoprint - INFO - [NAVIGATION] Preview screen displayed
+2025-02-22 21:04:23,421 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 21:04:23,475 - pisoprint - INFO - [NAVIGATION] Preview screen displayed
+2025-02-22 21:04:24,125 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 21:04:24,152 - pisoprint - INFO - [NAVIGATION] Selection screen displayed
+2025-02-22 21:04:32,543 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 21:04:32,553 - pisoprint - INFO - CoinAcceptor initialized with port COM4, baudrate 9600
+2025-02-22 21:04:32,554 - pisoprint - INFO - Connecting to coin acceptor on port COM4
+2025-02-22 21:04:34,559 - pisoprint - INFO - Coin reading thread started
+2025-02-22 21:04:34,559 - pisoprint - INFO - Successfully connected to coin acceptor
+2025-02-22 21:04:34,565 - pisoprint - INFO - Coin callback function set
+2025-02-22 21:04:34,566 - pisoprint - INFO - [PAYMENT] Coin acceptor connected and ready
+2025-02-22 21:04:34,599 - pisoprint - INFO - [NAVIGATION] Payment screen displayed
+2025-02-22 21:04:38,683 - pisoprint - INFO - [PAYMENT] Payment cancelled. No coins inserted.
+2025-02-22 21:04:38,683 - pisoprint - ERROR - [CoinAcceptor] Invalid callback function (not callable)
+2025-02-22 21:04:38,689 - pisoprint - INFO - [APP_STATE] System state reset
+2025-02-22 21:04:38,724 - pisoprint - INFO - [NAVIGATION] Screen cleared
+2025-02-22 21:04:38,750 - pisoprint - INFO - [NAVIGATION] Main screen displayed
